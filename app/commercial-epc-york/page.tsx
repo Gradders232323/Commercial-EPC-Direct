@@ -38,7 +38,7 @@ export default function CommercialEpcYork() {
           <div className="breadcrumb"><a href="/">Home</a><span>/</span>Commercial EPC York</div>
           <div className="eyebrow"><span></span> Commercial energy assessors in York</div>
           <h1>Commercial EPC<br/><em>York.</em></h1>
-          <p className="hero-intro">Need a Commercial EPC in York? Gradwell Group provides professional Energy Performance Certificates for commercial and non-domestic properties throughout York and the surrounding area.</p>
+          <p className="hero-intro">Need a Commercial EPC in York? Commercial EPC Direct provides professional Energy Performance Certificates for commercial and non-domestic properties throughout York and the surrounding area.</p>
           <div className="hero-actions"><a className="button" href="#top-enquiry">Get your York EPC quote <span>→</span></a><a className="text-link" href="#services">View our service <span>↓</span></a></div>
           <div className="location-proof"><span>✓</span> Delivered directly by our accredited in-house assessors</div>
         </div>
@@ -124,7 +124,7 @@ export default function CommercialEpcYork() {
         <div className="areas-copy">
           <span className="kicker light">Commercial EPCs across York</span><h2>York-wide coverage, with support beyond the city.</h2>
           <p>We provide Commercial EPC assessments throughout York and surrounding North Yorkshire locations. If your property is outside York, send us the postcode and we can confirm coverage.</p>
-          <div className="why-choose"><strong>Why choose Gradwell Group?</strong><ul><li>Our own accredited in-house assessors</li><li>No freelance assessor network</li><li>Fast appointment availability</li><li>Support for complex commercial properties</li></ul></div>
+          <div className="why-choose"><strong>Why choose Commercial EPC Direct?</strong><ul><li>Our own accredited in-house assessors</li><li>No freelance assessor network</li><li>Fast appointment availability</li><li>Support for complex commercial properties</li></ul></div>
           <a className="button button-light" href="#york-quote">Check your property <span>→</span></a>
         </div>
         <div className="area-list">{areas.map((area, index) => <div key={area}><span>{String(index + 1).padStart(2, "0")}</span><strong>{area}</strong><i>↗</i></div>)}</div>

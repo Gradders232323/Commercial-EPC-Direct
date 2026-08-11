@@ -39,7 +39,7 @@ export default function CommercialEpcManchester() {
           <div className="breadcrumb"><a href="/">Home</a><span>/</span><a href="/locations">Locations</a><span>/</span>Commercial EPC Manchester</div>
           <div className="eyebrow"><span></span> Commercial energy assessors in Manchester</div>
           <h1>Commercial EPC<br/><em>Manchester.</em></h1>
-          <p className="hero-intro">Gradwell Environmental provides professional Commercial Energy Performance Certificate assessments for offices, shops, warehouses, industrial units and other non-domestic properties throughout Manchester and Greater Manchester.</p>
+          <p className="hero-intro">Commercial EPC Direct provides professional Commercial Energy Performance Certificate assessments for offices, shops, warehouses, industrial units and other non-domestic properties throughout Manchester and Greater Manchester.</p>
           <div className="hero-actions"><a className="button" href="#manchester-top-enquiry">Get your Manchester quote <span>→</span></a><a className="text-link" href="#manchester-services">Explore the service <span>↓</span></a></div>
           <div className="location-proof"><span>✓</span> Delivered directly by our accredited in-house assessors</div>
         </div>
@@ -123,7 +123,7 @@ export default function CommercialEpcManchester() {
       </section>
 
       <section className="york-areas" id="manchester-areas">
-        <div className="areas-copy"><span className="kicker light">Commercial EPC coverage across Manchester</span><h2>Across the city, conurbation and major industrial corridors.</h2><p>Motorway connections including the M60, M62, M56, M602 and M61 support a substantial network of business parks, logistics sites and industrial estates.</p><p>Our in-house team handles individual instructions and multiple properties across Greater Manchester and the wider North West.</p><div className="why-choose"><strong>Why choose Gradwell Environmental?</strong><ul><li>Our own accredited in-house assessors</li><li>No freelance assessor network</li><li>Clear property-specific quotations</li><li>Single and portfolio instructions</li></ul></div><a className="button button-light" href="#manchester-quote">Check your property <span>→</span></a></div>
+        <div className="areas-copy"><span className="kicker light">Commercial EPC coverage across Manchester</span><h2>Across the city, conurbation and major industrial corridors.</h2><p>Motorway connections including the M60, M62, M56, M602 and M61 support a substantial network of business parks, logistics sites and industrial estates.</p><p>Our in-house team handles individual instructions and multiple properties across Greater Manchester and the wider North West.</p><div className="why-choose"><strong>Why choose Commercial EPC Direct?</strong><ul><li>Our own accredited in-house assessors</li><li>No freelance assessor network</li><li>Clear property-specific quotations</li><li>Single and portfolio instructions</li></ul></div><a className="button button-light" href="#manchester-quote">Check your property <span>→</span></a></div>
         <div className="area-list">{areas.map((area, index) => <div key={area}><span>{String(index + 1).padStart(2, "0")}</span><strong>{area}</strong><i>↗</i></div>)}</div>
       </section>
 

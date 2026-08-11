@@ -35,7 +35,7 @@ export default function AboutPage() {
         <div className="breadcrumb"><a href="/">Home</a><span>/</span>About</div>
         <div className="eyebrow"><span></span> About Commercial EPC Direct</div>
         <h1>Commercial property assessments,<br/><em>handled in-house.</em></h1>
-        <p>Commercial EPC Direct is the direct assessment service from Gradwell Environmental. We help landlords, businesses, agents and property professionals obtain the reports and certificates their commercial buildings require.</p>
+        <p>Commercial EPC Direct helps landlords, businesses, agents and property professionals obtain the reports and certificates their commercial buildings require.</p>
         <div className="hero-actions"><a className="button" href="#about-enquiry">Discuss your property <span>→</span></a><a className="text-link" href="#our-approach">How we work <span>↓</span></a></div>
       </div>
       <aside className="about-team-card">
@@ -50,7 +50,7 @@ export default function AboutPage() {
 
     <section className="section about-story" id="our-approach">
       <div><span className="kicker">Who we are</span><h2>A practical team for commercial property compliance.</h2></div>
-      <div><p>We created Commercial EPC Direct to make commercial property assessments easier to arrange and easier to understand. Our clients need clear answers, realistic timescales and documentation they can rely on.</p><p>Every assessment is handled by Gradwell Environmental’s own in-house team. That gives you a direct relationship with the people responsible for reviewing the property, arranging access, completing the work and providing the finished documentation.</p><p>Whether the instruction is for one shop, a multi-storey office, a large industrial building or a portfolio across several locations, we start by understanding the property and the required outcome.</p></div>
+      <div><p>We created Commercial EPC Direct to make commercial property assessments easier to arrange and easier to understand. Our clients need clear answers, realistic timescales and documentation they can rely on.</p><p>Every assessment is handled by the Commercial EPC Direct in-house team. That gives you a direct relationship with the people responsible for reviewing the property, arranging access, completing the work and providing the finished documentation.</p><p>Whether the instruction is for one shop, a multi-storey office, a large industrial building or a portfolio across several locations, we start by understanding the property and the required outcome.</p></div>
     </section>
 
     <section className="about-principles">

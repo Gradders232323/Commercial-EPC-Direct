@@ -45,7 +45,7 @@ export default function PrivacyPage() {
       <article className="privacy-content">
         <section id="who-we-are">
           <h2>1. Who we are</h2>
-          <p>Commercial EPC Direct is a commercial property assessment service provided by Gradwell Environmental. For the purposes of UK data protection law, Gradwell Environmental is responsible for deciding how and why personal information submitted through this website is used.</p>
+          <p>Commercial EPC Direct provides commercial property assessment services. For the purposes of UK data protection law, Commercial EPC Direct is responsible for deciding how and why personal information submitted through this website is used.</p>
           <div className="privacy-callout"><strong>Our approach</strong><p>We only ask for the information we need to understand and respond to your enquiry. We do not sell personal information.</p></div>
         </section>
 
@@ -114,7 +114,7 @@ export default function PrivacyPage() {
         <section id="contact">
           <h2>8. Contact us and make a complaint</h2>
           <p>To ask a privacy question or exercise your rights, contact us using the details below. Please include enough information for us to understand and respond to your request.</p>
-          <div className="privacy-contact-card"><strong>Commercial EPC Direct</strong><p>A service provided by Gradwell Environmental</p><p><a href="mailto:hello@commercialepcdirect.co.uk">hello@commercialepcdirect.co.uk</a></p><p><a href="tel:08000000000">0800 000 0000</a></p></div>
+          <div className="privacy-contact-card"><strong>Commercial EPC Direct</strong><p>Commercial property assessment services</p><p><a href="mailto:hello@commercialepcdirect.co.uk">hello@commercialepcdirect.co.uk</a></p><p><a href="tel:08000000000">0800 000 0000</a></p></div>
           <h3>Complaints</h3>
           <p>If you are unhappy with how we have handled your information, please contact us first so we can try to resolve the matter. You also have the right to complain to the Information Commissioner’s Office. Visit <a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noreferrer">ico.org.uk/make-a-complaint</a> for current contact details and guidance.</p>
           <h3>Changes to this notice</h3>

@@ -148,7 +148,7 @@ export default function CommercialEpcManchester() {
         </div>
       </section>
 
-      <footer><a className="brand brand-footer" href="/"><span className="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Commercial EPC <b>Direct</b></span></a><p>Commercial energy assessments, made simple.</p><div className="footer-links"><a href="/">Home</a><a href="#manchester-services">Services</a><a href="#manchester-faq">Guides</a><a href="/#process">About</a><a href="/locations">Locations</a><a href="#manchester-quote">Get a quote</a></div><SocialLinks /><small>© {new Date().getFullYear()} Commercial EPC Direct. All rights reserved.</small></footer>
+      <footer><a className="brand brand-footer" href="/"><span className="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Commercial EPC <b>Direct</b></span></a><p>Commercial energy assessments, made simple.</p><div className="footer-links"><a href="/">Home</a><a href="#manchester-services">Services</a><a href="#manchester-faq">Guides</a><a href="/about">About</a><a href="/locations">Locations</a><a href="#manchester-quote">Get a quote</a></div><SocialLinks /><small>© {new Date().getFullYear()} Commercial EPC Direct. All rights reserved.</small></footer>
     </main>
   );
 }

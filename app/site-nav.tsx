@@ -16,7 +16,7 @@ export default function SiteNav({ quoteHref = "/#quote" }: { quoteHref?: string 
           <div className="services-mega"><div className="service-mega-intro"><span className="kicker">Commercial property services</span><strong>What does your property need?</strong><p>Clear assessments, reports and plans from the right specialist.</p><a href="/services">View all services →</a></div><div className="service-mega-grid">{services.map((service,index)=><a key={service.slug} href={`/services/${service.slug}`}><span>0{index+1}</span><strong>{service.title}</strong><small>{service.menuCopy}</small><i>→</i></a>)}</div></div>
         </details>
         <a href="/#faq">Guides</a>
-        <a href="/#process">About</a>
+        <a href="/about">About</a>
         <details className="locations-nav">
           <summary>Locations <span>⌄</span></summary>
           <div className="locations-mega">
@@ -29,7 +29,7 @@ export default function SiteNav({ quoteHref = "/#quote" }: { quoteHref?: string 
       <div className="nav-actions">
         <details className="mobile-nav">
           <summary aria-label="Open navigation"><i></i><i></i><i></i></summary>
-          <div className="mobile-nav-panel"><a href="/services">All services</a>{services.map(service=><a key={service.slug} href={`/services/${service.slug}`}>{service.title}</a>)}<a href="/#faq">Guides</a><a href="/#process">About</a><a href="/locations">All locations</a><a href="/commercial-epc-york">Commercial EPC York</a><a href="/commercial-epc-leeds">Commercial EPC Leeds</a><a href="/commercial-epc-manchester">Commercial EPC Manchester</a><a href="/commercial-epc-birmingham">Commercial EPC Birmingham</a><a href="/commercial-epc-london">Commercial EPC London</a><a href="/commercial-epc-bristol">Commercial EPC Bristol</a><div><small>REGIONS</small>{locationRegions.slice(0,6).map(region => <a key={region.slug} href={`/locations#${region.slug}`}>{region.name}</a>)}</div></div>
+          <div className="mobile-nav-panel"><a href="/services">All services</a>{services.map(service=><a key={service.slug} href={`/services/${service.slug}`}>{service.title}</a>)}<a href="/#faq">Guides</a><a href="/about">About</a><a href="/locations">All locations</a><a href="/commercial-epc-york">Commercial EPC York</a><a href="/commercial-epc-leeds">Commercial EPC Leeds</a><a href="/commercial-epc-manchester">Commercial EPC Manchester</a><a href="/commercial-epc-birmingham">Commercial EPC Birmingham</a><a href="/commercial-epc-london">Commercial EPC London</a><a href="/commercial-epc-bristol">Commercial EPC Bristol</a><div><small>REGIONS</small>{locationRegions.slice(0,6).map(region => <a key={region.slug} href={`/locations#${region.slug}`}>{region.name}</a>)}</div></div>
         </details>
         <a className="button button-small" href={quoteHref}>Get a quote <span>→</span></a>
       </div>

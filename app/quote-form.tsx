@@ -55,10 +55,10 @@ export default function QuoteForm({ postcodePlaceholder = "e.g. SW1A 1AA", formL
       <div className="form-step"><span>QUICK ENQUIRY</span><b>{formLabel}</b></div>
       <input type="checkbox" name="botcheck" className="form-botcheck" tabIndex={-1} autoComplete="off" aria-hidden="true" />
       <label>Property postcode<input name="postcode" autoComplete="postal-code" placeholder={postcodePlaceholder} required /></label>
-      <label>Property type<select name="type" required defaultValue=""><option value="" disabled>Select property type</option><option>Office</option><option>Retail</option><option>Industrial / warehouse</option><option>Hospitality / leisure</option><option>Other commercial property</option></select></label>
+      <label>First line of address<input name="address_line_1" autoComplete="address-line1" placeholder="Building number and street" required /></label>
       <div className="field-row">
         <label>Your name<input name="name" autoComplete="name" placeholder="Full name" required /></label>
-        <label>Work email<input name="email" type="email" autoComplete="email" placeholder="you@company.co.uk" required /></label>
+        <label>Email<input name="email" type="email" autoComplete="email" placeholder="you@example.com" required /></label>
       </div>
       {error && <p className="form-error" role="alert">{error}</p>}
       <button className="button form-button" type="submit" disabled={sending}>{sending ? "Sending enquiry…" : buttonLabel} <span>{sending ? "·" : "→"}</span></button>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import QuoteForm from "../quote-form";
 import SiteNav from "../site-nav";
 import SocialLinks from "../social-links";
+import IndustryLogos from "../industry-logos";
 
 export const metadata: Metadata = {
   title: "Commercial EPC York | Fast Commercial EPC Certificates",
@@ -58,6 +59,8 @@ export default function CommercialEpcYork() {
         <div className="benefit"><span>02</span><div><strong>Competitive quotes</strong><p>Priced for your specific property</p></div></div>
         <div className="benefit"><span>03</span><div><strong>Accredited assessors</strong><p>Commercial energy specialists</p></div></div>
       </section>
+
+      <IndustryLogos />
 
       <section className="quote-section enquiry-placement top-enquiry" id="top-enquiry">
         <div className="quote-copy"><span className="kicker">Quick York EPC enquiry</span><h2>Get a quote for your property.</h2><p>Share a few basic details and we’ll prepare a quotation for your Commercial EPC assessment.</p><div className="quote-promise"><span>✓</span><div><strong>Fast response</strong><p>Clear next steps from our team.</p></div></div><div className="quote-promise"><span>✓</span><div><strong>No obligation</strong><p>Review your quote before you book.</p></div></div></div>

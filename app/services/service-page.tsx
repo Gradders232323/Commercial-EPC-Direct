@@ -1,6 +1,7 @@
 import QuoteForm from "../quote-form";
 import SiteNav from "../site-nav";
 import SocialLinks from "../social-links";
+import IndustryLogos from "../industry-logos";
 import { Service, services } from "../service-data";
 
 export default function ServicePage({ service }: { service: Service }) {
@@ -8,6 +9,7 @@ export default function ServicePage({ service }: { service: Service }) {
   return <main className="service-detail-page">
     <SiteNav quoteHref="#service-enquiry" />
     <section className="service-detail-hero"><div><div className="breadcrumb"><a href="/">Home</a><span>/</span><a href="/services">Services</a><span>/</span>{service.title}</div><div className="eyebrow"><span></span>{service.eyebrow}</div><h1>{service.headline}</h1><p>{service.description}</p><a className="button" href="#service-enquiry">Request a quote <span>→</span></a></div><aside><small>COMMERCIAL EPC DIRECT</small><strong>{service.title}</strong><div className="service-signal"><i></i><i></i><i></i><i></i><i></i></div><p>Accredited specialists.<br/>Clear reporting.<br/>Direct support.</p></aside></section>
+    <IndustryLogos />
     <section className="section service-overview"><div><span className="kicker">About the service</span><h2>What is {service.title}?</h2></div><p>{service.overview}</p></section>
     <section className="service-facts"><div><span className="kicker light">Who it’s for</span><h2>Built around commercial property.</h2>{service.suitable.map(item=><p key={item}><span>✓</span>{item}</p>)}</div><div><span className="kicker light">What we consider</span><h2>A clear, professional assessment.</h2>{service.checks.map((item,index)=><p key={item}><span>0{index+1}</span>{item}</p>)}</div></section>
     <section className="section service-process"><div className="section-heading"><div><span className="kicker">How it works</span><h2>One team, three clear steps.</h2></div><p>We keep the process moving and give you one point of contact from the first property details to the final documentation.</p></div><div className="service-process-grid"><article><span>01</span><h3>Share the property</h3><p>Tell us the location, building type and what you need.</p></article><article><span>02</span><h3>Book the assessment</h3><p>We arrange a convenient visit with the right specialist.</p></article><article><span>03</span><h3>Receive the report</h3><p>{service.deliverable}</p></article></div></section>

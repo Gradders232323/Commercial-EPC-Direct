@@ -1,6 +1,7 @@
 import QuoteForm from "./quote-form";
 import SiteNav from "./site-nav";
 import SocialLinks from "./social-links";
+import IndustryLogos from "./industry-logos";
 
 const benefits = [
   ["Nationwide", "Accredited assessors across the UK"],
@@ -65,6 +66,8 @@ export default function Home() {
           </div>
         ))}
       </section>
+
+      <IndustryLogos />
 
       <section className="section services" id="services">
         <div className="section-heading">

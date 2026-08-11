@@ -12,9 +12,16 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", images: ["https://commercial-epc-direct.gradwell-gro-3352.chatgpt.site/og.png"] },
 };
 
-const propertyTypes = ["Offices", "Retail units and shops", "Warehouses", "Industrial units", "Restaurants and cafés", "Hotels and accommodation", "Healthcare premises", "Commercial developments", "Mixed-use buildings", "Other non-domestic properties"];
+const propertyTypes = ["Offices and office buildings", "Retail shops and parade units", "Warehouses", "Industrial units", "Workshops", "Business units", "Restaurants and cafés", "Pubs and hospitality premises", "Storage facilities", "Trade counters", "Mixed-use developments", "Larger commercial buildings"];
 const assessmentFactors = ["Building construction", "Floor area and layout", "Heating systems", "Cooling and ventilation", "Lighting", "Windows and glazing", "Insulation", "Hot water systems", "Building controls"];
-const areas = ["Leeds city centre", "Holbeck", "Hunslet", "Headingley", "Roundhay", "Armley", "Kirkstall", "Chapel Allerton", "Pudsey", "Morley", "Garforth", "West Yorkshire"];
+const areas = ["Leeds city centre", "Holbeck", "Hunslet", "Stourton", "Cross Green", "Beeston", "Wortley", "Armley", "Kirkstall", "Headingley", "Hyde Park", "Chapel Allerton", "Roundhay", "Harehills", "Seacroft", "Cross Gates", "Garforth", "Rothwell", "Morley", "Pudsey", "Horsforth", "Yeadon", "West Yorkshire", "Surrounding areas"];
+const cityCentreAreas = ["Wellington Place", "Wellington Street", "Park Row", "East Parade", "The Headrow", "Briggate", "Boar Lane", "Call Lane", "New Station Street", "Great George Street", "Queen Street", "Holbeck", "Leeds Dock", "South Bank"];
+const sectorDetails = [
+  { number: "01", title: "Leeds offices", copy: "From individual suites and converted offices to multi-storey buildings, business centres and mixed office-and-retail developments across the traditional business district, Wellington Place, Holbeck and South Bank.", items: ["Individual offices", "Office suites", "Business centres", "Multi-storey offices"] },
+  { number: "02", title: "Shops and retail", copy: "Assessments for high-street shops, retail units, showrooms, restaurants, cafés and other customer-facing premises across central Leeds and suburban commercial centres.", items: ["High-street shops", "Retail units", "Showrooms", "Restaurants and cafés"] },
+  { number: "03", title: "Warehouses", copy: "Commercial EPCs for warehouse, logistics, distribution and storage properties around southern and eastern Leeds, including the M621 corridor.", items: ["Distribution units", "Storage facilities", "Warehouse and office units", "Trade counters"] },
+  { number: "04", title: "Industrial property", copy: "Support for light industrial units, manufacturing premises, workshops, engineering units and standalone buildings on Leeds business parks and industrial estates.", items: ["Manufacturing premises", "Workshops", "Engineering units", "Industrial estates"] },
+];
 const audiences = [
   ["Commercial landlords", "Arrange EPC assessments before marketing or reletting commercial premises."],
   ["Property managers", "Manage EPC requirements across individual buildings or wider portfolios."],
@@ -32,7 +39,7 @@ export default function CommercialEpcLeeds() {
           <div className="breadcrumb"><a href="/">Home</a><span>/</span><a href="/locations">Locations</a><span>/</span>Commercial EPC Leeds</div>
           <div className="eyebrow"><span></span> Commercial energy assessors in Leeds</div>
           <h1>Commercial EPC<br/><em>Leeds.</em></h1>
-          <p className="hero-intro">Arrange a professional Commercial Energy Performance Certificate for an office, shop, warehouse, industrial unit or other non-domestic property in Leeds and the surrounding area.</p>
+          <p className="hero-intro">Need a Commercial EPC in Leeds? Gradwell Environmental provides professional Commercial Energy Performance Certificate assessments for offices, shops, warehouses, industrial units and other non-domestic properties across Leeds and West Yorkshire.</p>
           <div className="hero-actions"><a className="button" href="#leeds-top-enquiry">Get your Leeds EPC quote <span>→</span></a><a className="text-link" href="#leeds-services">View the service <span>↓</span></a></div>
           <div className="location-proof"><span>✓</span> Accredited commercial energy assessors across Leeds and West Yorkshire</div>
         </div>
@@ -57,13 +64,42 @@ export default function CommercialEpcLeeds() {
         <div className="introduction-grid"><h2>Your commercial EPC, handled from enquiry to certificate.</h2><div><p>A Commercial EPC records the energy efficiency of a non-domestic building on a scale from A+ to G and includes recommendations for potential improvements.</p><p>Whether you are selling, letting, developing or managing a commercial property, we can arrange the right assessor and keep the process straightforward.</p><a className="inline-arrow" href="#leeds-top-enquiry">Request a Leeds quote <span>→</span></a></div></div>
       </section>
       <section className="epc-services" id="leeds-services">
-        <div className="services-copy"><span className="kicker light">Commercial EPC services in Leeds</span><h2>Assessments for every kind of commercial property.</h2><p>Commercial EPCs are commonly required when a non-domestic building is constructed, sold or let. The assessment considers the building fabric and fixed services before the certificate is produced and lodged where required.</p><p>We match the property with an appropriately qualified commercial energy assessor and provide one point of contact throughout.</p></div>
+        <div className="services-copy"><span className="kicker light">Commercial EPC services across Leeds</span><h2>Assessments for a varied commercial property market.</h2><p>Leeds contains everything from modern city-centre offices and traditional retail units to converted buildings, business parks, warehouses and large industrial properties.</p><p>Commercial EPCs are commonly required when an applicable non-domestic building is constructed, sold or let. We match the property with an appropriately qualified assessor and provide one point of contact throughout.</p></div>
         <div className="property-checklist">{propertyTypes.map((type, index) => <div key={type}><span>{String(index + 1).padStart(2, "0")}</span><strong>{type}</strong><i>✓</i></div>)}</div>
+      </section>
+
+      <section className="section leeds-city-centre">
+        <div className="leeds-city-copy"><span className="kicker">Commercial EPC assessments in Leeds city centre</span><h2>Central Leeds buildings, from single units to complex developments.</h2><p>Leeds city centre combines modern commercial developments with older buildings that have been refurbished, converted or divided into multiple commercial units. Assessments can range from individual shops and office suites to substantially larger office buildings.</p><p>Send us the address, approximate floor area and building type and we’ll prepare a property-specific quotation.</p><a className="inline-arrow" href="#leeds-mid-enquiry">Request a city-centre quote <span>→</span></a></div>
+        <div className="leeds-district-grid">{cityCentreAreas.map((area, index) => <div key={area}><span>{String(index + 1).padStart(2, "0")}</span><strong>{area}</strong></div>)}</div>
+      </section>
+
+      <section className="leeds-sector-section">
+        <div className="leeds-sector-heading"><span className="kicker light">Commercial property expertise</span><h2>Offices, retail, warehouse and industrial EPCs.</h2><p>The building use, construction and installed services all affect the scope of a commercial assessment. Our Leeds service accommodates straightforward units and larger mixed-use buildings.</p></div>
+        <div className="leeds-sector-grid">{sectorDetails.map(sector => <article key={sector.title}><span>{sector.number}</span><h3>{sector.title}</h3><p>{sector.copy}</p><ul>{sector.items.map(item => <li key={item}>{item}</li>)}</ul></article>)}</div>
       </section>
       <section className="assessment-section">
         <div className="assessment-heading"><span className="kicker light">Commercial EPC assessors in Leeds</span><h2>A thorough inspection, completed correctly.</h2><p>The assessor gathers the information needed to model the building’s energy performance using the approved commercial EPC methodology.</p></div>
         <div className="factor-grid">{assessmentFactors.map((factor, index) => <div key={factor}><span>{String(index + 1).padStart(2, "0")}</span><strong>{factor}</strong></div>)}</div>
         <p className="method-note">The scope and price depend on the building’s size, construction, services and complexity. Send us the property details for an accurate quotation.</p>
+      </section>
+
+      <section className="section leeds-compliance-section">
+        <div className="leeds-compliance-heading"><span className="kicker">Commercial EPC requirements</span><h2>Understand the certificate, rating and letting requirements.</h2><p>Requirements depend on the particular building and circumstances, and exemptions can apply. Where there is uncertainty, obtain appropriate professional or legal advice.</p></div>
+        <div className="leeds-compliance-grid">
+          <article><span>01</span><h3>When might an EPC be needed?</h3><p>An EPC is generally required when an applicable non-domestic building is constructed, sold or let to a new tenant, subject to the relevant exemptions.</p><ul><li>New construction</li><li>Commercial sale</li><li>New letting</li></ul></article>
+          <article><span>02</span><h3>How long does it last?</h3><p>A Commercial EPC is normally valid for 10 years, or until it is replaced by a newer certificate. Existing certificates can be checked on the official government register.</p><a href="https://www.gov.uk/find-energy-certificate" target="_blank" rel="noreferrer">Check the EPC register ↗</a></article>
+          <article><span>03</span><h3>Ratings and MEES</h3><p>Commercial EPCs use an A+ to G scale. Privately rented non-domestic properties covered by MEES generally need an E rating or above unless a valid exemption applies.</p><a href="https://www.gov.uk/guidance/non-domestic-private-rented-property-minimum-energy-efficiency-standard-landlord-guidance" target="_blank" rel="noreferrer">Read government guidance ↗</a></article>
+        </div>
+      </section>
+
+      <section className="leeds-process-section">
+        <div><span className="kicker light">How to get a Commercial EPC in Leeds</span><h2>Four straightforward steps.</h2><p>For larger buildings, floor plans and existing property information can help us establish the scope more quickly.</p></div>
+        <ol>
+          <li><span>01</span><div><h3>Send the property details</h3><p>Provide the address, approximate floor area, building type, current use and required timescale.</p></div></li>
+          <li><span>02</span><div><h3>Receive your EPC quote</h3><p>We review the information and provide a quotation based on the building and assessment requirements.</p></div></li>
+          <li><span>03</span><div><h3>Arrange site access</h3><p>Once instructed, access is coordinated for the Non-Domestic Energy Assessor to inspect the property.</p></div></li>
+          <li><span>04</span><div><h3>Assessment and lodgement</h3><p>The collected information is used to complete the energy assessment and produce the EPC for lodgement where required.</p></div></li>
+        </ol>
       </section>
       <section className="quote-section enquiry-placement middle-enquiry" id="leeds-mid-enquiry">
         <div className="quote-copy"><span className="kicker">Working to a deadline?</span><h2>Tell us when you need it.</h2><p>If the EPC is required for a sale, new lease or other deadline, include the date with your enquiry and we’ll advise on availability.</p><div className="quote-promise"><span>✓</span><div><strong>Property-specific price</strong><p>Based on the building and scope.</p></div></div><div className="quote-promise"><span>✓</span><div><strong>Deadline support</strong><p>Availability confirmed clearly.</p></div></div></div>
@@ -74,7 +110,7 @@ export default function CommercialEpcLeeds() {
         <div className="audience-grid">{audiences.map(([title, copy], index) => <article key={title}><span>{String(index + 1).padStart(2, "0")}</span><h3>{title}</h3><p>{copy}</p></article>)}</div>
       </section>
       <section className="york-areas" id="leeds-areas">
-        <div className="areas-copy"><span className="kicker light">Commercial EPCs across Leeds</span><h2>City-wide coverage, with support across West Yorkshire.</h2><p>We arrange Commercial EPC assessments throughout Leeds and surrounding locations. Send us the postcode and we’ll confirm local assessor coverage.</p><div className="why-choose"><strong>Why choose Commercial EPC Direct?</strong><ul><li>Accredited energy assessors</li><li>Clear quotations</li><li>Convenient appointments</li><li>Support for complex buildings</li></ul></div><a className="button button-light" href="#leeds-quote">Check your property <span>→</span></a></div>
+        <div className="areas-copy"><span className="kicker light">Commercial EPC coverage across Leeds</span><h2>City-wide coverage, with support across West Yorkshire.</h2><p>From city-centre offices and retail premises to warehouses near Hunslet, Stourton, Cross Green and the M621 corridor, we arrange assessments throughout the Leeds commercial property market.</p><p>Our service suits single-property owners as well as landlords, investors and agents responsible for portfolios across multiple locations.</p><div className="why-choose"><strong>Why choose Gradwell Environmental?</strong><ul><li>Accredited energy assessors</li><li>Experience across building types</li><li>Clear property-specific quotations</li><li>Single and portfolio instructions</li></ul></div><a className="button button-light" href="#leeds-quote">Check your property <span>→</span></a></div>
         <div className="area-list">{areas.map((area, index) => <div key={area}><span>{String(index + 1).padStart(2, "0")}</span><strong>{area}</strong><i>↗</i></div>)}</div>
       </section>
       <section className="quote-section york-quote" id="leeds-quote">
@@ -89,6 +125,11 @@ export default function CommercialEpcLeeds() {
           <details><summary>How much does a Commercial EPC cost in Leeds?<span>+</span></summary><p>The price depends on the building’s size, layout, services and complexity. Send us the address and basic property information for a tailored quote.</p></details>
           <details><summary>How quickly can an assessment be arranged?<span>+</span></summary><p>Availability varies, but we will confirm the likely appointment and turnaround when quoting. Tell us if you are working towards a deadline.</p></details>
           <details><summary>What details do you need for a quote?<span>+</span></summary><p>The address, approximate floor area, property type and reason the EPC is required will help us price the work accurately.</p></details>
+          <details><summary>Who can produce a Commercial EPC?<span>+</span></summary><p>The assessment must be completed by an appropriately qualified and accredited Non-Domestic Energy Assessor.</p></details>
+          <details><summary>Can you assess warehouses in Leeds?<span>+</span></summary><p>Yes. We arrange Commercial EPC assessments for warehouses, distribution units, storage facilities and other industrial properties throughout Leeds.</p></details>
+          <details><summary>Do you cover Hunslet, Stourton and Cross Green?<span>+</span></summary><p>Yes. Our Leeds coverage includes these major commercial and industrial areas as well as Holbeck, Beeston, Wortley and other districts.</p></details>
+          <details><summary>Can you provide an EPC for a Leeds office?<span>+</span></summary><p>Yes. We can arrange assessments for individual offices, office suites, business centres and larger office buildings throughout Leeds.</p></details>
+          <details><summary>Can you coordinate several properties?<span>+</span></summary><p>Yes. Send us the addresses and available property information and we can review the requirements for a commercial portfolio.</p></details>
           <details><summary>Do you cover areas outside Leeds?<span>+</span></summary><p>Yes. Coverage is available across West Yorkshire and beyond. Send the postcode and we’ll confirm availability.</p></details>
         </div>
       </section>

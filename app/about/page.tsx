@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "About Commercial EPC Direct | Our In-House Assessment Team",
   description: "Meet the in-house team behind Commercial EPC Direct and learn how we deliver straightforward commercial property assessments across the UK.",
   alternates: { canonical: "/about" },
-  openGraph: { title: "About Commercial EPC Direct", description: "Commercial property assessments delivered directly by our own in-house team.", url: "https://commercial-epc-direct.gradwell-gro-3352.chatgpt.site/about", images: [{ url: "https://commercial-epc-direct.gradwell-gro-3352.chatgpt.site/og.png", width: 1731, height: 909, alt: "Commercial EPC Direct" }] },
+  openGraph: { title: "About Commercial EPC Direct", description: "Commercial property assessments delivered directly by our own in-house team.", url: "https://www.commercialepcdirect.co.uk/about", images: [{ url: "https://www.commercialepcdirect.co.uk/og.png", width: 1731, height: 909, alt: "Commercial EPC Direct" }] },
 };
 
 const services = [

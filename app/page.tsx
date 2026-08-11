@@ -1,7 +1,10 @@
+import type { Metadata } from "next";
 import QuoteForm from "./quote-form";
 import SiteNav from "./site-nav";
 import SocialLinks from "./social-links";
 import IndustryLogos from "./industry-logos";
+
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 const benefits = [
   ["Nationwide", "Our in-house assessors across the UK"],

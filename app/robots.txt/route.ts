@@ -1,4 +1,4 @@
-const baseUrl = "https://commercial-epc-direct.gradwell-gro-3352.chatgpt.site";
+const baseUrl = "https://www.commercialepcdirect.co.uk";
 
 export function GET() {
   const body = [

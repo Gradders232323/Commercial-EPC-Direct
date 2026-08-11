@@ -1,2 +1,2 @@
 import type { Metadata } from "next"; import { serviceBySlug } from "../../service-data"; import ServicePage from "../service-page";
-export const metadata:Metadata={title:"Legionella Risk Assessments | Commercial EPC Direct",description:serviceBySlug.legionella.description}; export default function Page(){return <ServicePage service={serviceBySlug.legionella}/>}
+export const metadata:Metadata={title:"Legionella Risk Assessments | Commercial EPC Direct",description:serviceBySlug.legionella.description,alternates:{canonical:"/services/legionella"}}; export default function Page(){return <ServicePage service={serviceBySlug.legionella}/>}

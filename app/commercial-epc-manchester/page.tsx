@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   title: "Commercial EPC Manchester | Local Commercial EPC Assessors",
   description: "Commercial EPC assessments in Manchester for offices, shops, warehouses, industrial units and other non-domestic property across Greater Manchester.",
   alternates: { canonical: "/commercial-epc-manchester" },
-  openGraph: { title: "Commercial EPC Manchester | Local Commercial EPC Assessors", description: "Commercial energy assessments across Manchester and Greater Manchester.", url: "https://commercial-epc-direct.gradwell-gro-3352.chatgpt.site/commercial-epc-manchester", images: [{ url: "https://commercial-epc-direct.gradwell-gro-3352.chatgpt.site/og.png", width: 1731, height: 909, alt: "Commercial EPC Direct" }] },
-  twitter: { card: "summary_large_image", images: ["https://commercial-epc-direct.gradwell-gro-3352.chatgpt.site/og.png"] },
+  openGraph: { title: "Commercial EPC Manchester | Local Commercial EPC Assessors", description: "Commercial energy assessments across Manchester and Greater Manchester.", url: "https://www.commercialepcdirect.co.uk/commercial-epc-manchester", images: [{ url: "https://www.commercialepcdirect.co.uk/og.png", width: 1731, height: 909, alt: "Commercial EPC Direct" }] },
+  twitter: { card: "summary_large_image", images: ["https://www.commercialepcdirect.co.uk/og.png"] },
 };
 
 const propertyTypes = ["Offices and office buildings", "Retail shops and parade units", "Warehouses", "Industrial units", "Workshops", "Business units", "Restaurants and cafés", "Pubs and hospitality", "Storage facilities", "Trade counters", "Mixed-use developments", "Larger commercial buildings"];

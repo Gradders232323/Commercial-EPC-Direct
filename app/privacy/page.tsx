@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Privacy Notice | Commercial EPC Direct",
     description: "How we handle personal information submitted through the Commercial EPC Direct website.",
-    url: "https://commercial-epc-direct.gradwell-gro-3352.chatgpt.site/privacy",
+    url: "https://www.commercialepcdirect.co.uk/privacy",
   },
 };
 

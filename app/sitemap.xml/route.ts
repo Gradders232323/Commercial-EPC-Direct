@@ -1,6 +1,6 @@
 import { services } from "../service-data";
 
-const baseUrl = "https://commercial-epc-direct.gradwell-gro-3352.chatgpt.site";
+const baseUrl = "https://www.commercialepcdirect.co.uk";
 
 const coreRoutes = [
   { path: "", priority: "1.0", changeFrequency: "weekly" },

@@ -11,10 +11,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Commercial EPC York | Fast Commercial EPC Certificates",
     description: "Local assessors. Straightforward service.",
-    url: "https://commercial-epc-direct.gradwell-gro-3352.chatgpt.site/commercial-epc-york",
-    images: [{ url: "https://commercial-epc-direct.gradwell-gro-3352.chatgpt.site/og.png", width: 1731, height: 909, alt: "Commercial EPC York — local assessors, straightforward service" }],
+    url: "https://www.commercialepcdirect.co.uk/commercial-epc-york",
+    images: [{ url: "https://www.commercialepcdirect.co.uk/og.png", width: 1731, height: 909, alt: "Commercial EPC York — local assessors, straightforward service" }],
   },
-  twitter: { card: "summary_large_image", images: ["https://commercial-epc-direct.gradwell-gro-3352.chatgpt.site/og.png"] },
+  twitter: { card: "summary_large_image", images: ["https://www.commercialepcdirect.co.uk/og.png"] },
 };
 
 const propertyTypes = ["Offices", "Retail units and shops", "Warehouses", "Industrial units", "Restaurants and cafés", "Hotels and guest accommodation", "Healthcare premises", "Commercial developments", "Mixed-use buildings", "Other non-domestic properties"];

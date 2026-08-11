@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   title: "Commercial EPC Birmingham | Local Commercial EPC Assessors",
   description: "Commercial EPC assessments in Birmingham for offices, shops, warehouses, industrial units and non-domestic property across the West Midlands.",
   alternates: { canonical: "/commercial-epc-birmingham" },
-  openGraph: { title: "Commercial EPC Birmingham | Local Commercial EPC Assessors", description: "Commercial energy assessments across Birmingham and the West Midlands.", url: "https://commercial-epc-direct.gradwell-gro-3352.chatgpt.site/commercial-epc-birmingham", images: [{ url: "https://commercial-epc-direct.gradwell-gro-3352.chatgpt.site/og.png", width: 1731, height: 909, alt: "Commercial EPC Direct" }] },
-  twitter: { card: "summary_large_image", images: ["https://commercial-epc-direct.gradwell-gro-3352.chatgpt.site/og.png"] },
+  openGraph: { title: "Commercial EPC Birmingham | Local Commercial EPC Assessors", description: "Commercial energy assessments across Birmingham and the West Midlands.", url: "https://www.commercialepcdirect.co.uk/commercial-epc-birmingham", images: [{ url: "https://www.commercialepcdirect.co.uk/og.png", width: 1731, height: 909, alt: "Commercial EPC Direct" }] },
+  twitter: { card: "summary_large_image", images: ["https://www.commercialepcdirect.co.uk/og.png"] },
 };
 
 const propertyTypes = ["Offices and office buildings", "Retail shops and parade units", "Warehouses", "Industrial units", "Workshops", "Business units", "Restaurants and cafés", "Pubs and hospitality", "Storage facilities", "Trade counters", "Mixed-use developments", "Larger commercial buildings"];

@@ -8,6 +8,7 @@ import { services } from "../service-data";
 export const metadata: Metadata = {
   title: "Commercial Property Services | Commercial EPC Direct",
   description: "Commercial EPCs, TM44 inspections, EICRs, floor plans, Legionella risk assessments and Display Energy Certificates across the UK.",
+  alternates: { canonical: "/services" },
 };
 
 export default function ServicesPage() {

@@ -135,7 +135,7 @@ export default function CommercialEpcLeeds() {
       </section>
       <footer>
         <a className="brand brand-footer" href="/"><span className="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Commercial EPC <b>Direct</b></span></a><p>Commercial energy assessments, made simple.</p>
-        <div className="footer-links"><a href="/">Home</a><a href="#leeds-services">Services</a><a href="#leeds-faq">Guides</a><a href="/about">About</a><a href="/locations">Locations</a><a href="#leeds-quote">Get a quote</a></div>
+        <div className="footer-links"><a href="/">Home</a><a href="#leeds-services">Services</a><a href="/guides">Guides</a><a href="/about">About</a><a href="/locations">Locations</a><a href="#leeds-quote">Get a quote</a></div>
         <SocialLinks />
         <small>© {new Date().getFullYear()} Commercial EPC Direct. All rights reserved.</small>
       </footer>

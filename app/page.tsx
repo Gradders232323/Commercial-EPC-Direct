@@ -1,5 +1,6 @@
 import QuoteForm from "./quote-form";
 import SiteNav from "./site-nav";
+import SocialLinks from "./social-links";
 
 const benefits = [
   ["Nationwide", "Accredited assessors across the UK"],
@@ -120,6 +121,7 @@ export default function Home() {
         <a className="brand brand-footer" href="#top"><span className="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Commercial EPC <b>Direct</b></span></a>
         <p>Commercial energy assessments, made simple.</p>
         <div className="footer-links"><a href="#services">Services</a><a href="#faq">Guides</a><a href="#process">About</a><a href="/locations">Locations</a><a href="/commercial-epc-york">Commercial EPC York</a><a href="#quote">Get a quote</a></div>
+        <SocialLinks />
         <small>© {new Date().getFullYear()} Commercial EPC Direct. All rights reserved.</small>
       </footer>
     </main>

@@ -1,0 +1,2 @@
+import type { Metadata } from "next"; import { serviceBySlug } from "../../service-data"; import ServicePage from "../service-page";
+export const metadata:Metadata={title:"Commercial EPC Assessments | Commercial EPC Direct",description:serviceBySlug["commercial-epc"].description}; export default function Page(){return <ServicePage service={serviceBySlug["commercial-epc"]}/>}

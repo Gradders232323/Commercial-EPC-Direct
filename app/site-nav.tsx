@@ -1,11 +1,15 @@
 import { locationRegions, locationSlug, popularLocations } from "./location-data";
+import { services } from "./service-data";
 
 export default function SiteNav({ quoteHref = "/#quote" }: { quoteHref?: string }) {
   return (
     <nav className="nav site-nav" aria-label="Main navigation">
       <a className="brand" href="/" aria-label="Commercial EPC Direct home"><span className="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Commercial EPC <b>Direct</b></span></a>
       <div className="nav-links nav-structured">
-        <a href="/#services">Services</a>
+        <details className="service-nav">
+          <summary>Services <span>⌄</span></summary>
+          <div className="services-mega"><div className="service-mega-intro"><span className="kicker">Commercial property services</span><strong>What does your property need?</strong><p>Clear assessments, reports and plans from the right specialist.</p><a href="/services">View all services →</a></div><div className="service-mega-grid">{services.map((service,index)=><a key={service.slug} href={`/services/${service.slug}`}><span>0{index+1}</span><strong>{service.title}</strong><small>{service.menuCopy}</small><i>→</i></a>)}</div></div>
+        </details>
         <a href="/#faq">Guides</a>
         <a href="/#process">About</a>
         <details className="locations-nav">
@@ -20,7 +24,7 @@ export default function SiteNav({ quoteHref = "/#quote" }: { quoteHref?: string 
       <div className="nav-actions">
         <details className="mobile-nav">
           <summary aria-label="Open navigation"><i></i><i></i><i></i></summary>
-          <div className="mobile-nav-panel"><a href="/#services">Services</a><a href="/#faq">Guides</a><a href="/#process">About</a><a href="/locations">All locations</a><a href="/commercial-epc-york">Commercial EPC York</a><div><small>REGIONS</small>{locationRegions.slice(0,6).map(region => <a key={region.slug} href={`/locations#${region.slug}`}>{region.name}</a>)}</div></div>
+          <div className="mobile-nav-panel"><a href="/services">All services</a>{services.map(service=><a key={service.slug} href={`/services/${service.slug}`}>{service.title}</a>)}<a href="/#faq">Guides</a><a href="/#process">About</a><a href="/locations">All locations</a><a href="/commercial-epc-york">Commercial EPC York</a><div><small>REGIONS</small>{locationRegions.slice(0,6).map(region => <a key={region.slug} href={`/locations#${region.slug}`}>{region.name}</a>)}</div></div>
         </details>
         <a className="button button-small" href={quoteHref}>Get a quote <span>→</span></a>
       </div>

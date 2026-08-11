@@ -1,4 +1,5 @@
 import QuoteForm from "./quote-form";
+import SiteNav from "./site-nav";
 
 const benefits = [
   ["Nationwide", "Accredited assessors across the UK"],
@@ -16,18 +17,7 @@ const services = [
 export default function Home() {
   return (
     <main>
-      <nav className="nav" aria-label="Main navigation">
-        <a className="brand" href="#top" aria-label="Commercial EPC Direct home">
-          <span className="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span>Commercial EPC <b>Direct</b></span>
-        </a>
-        <div className="nav-links">
-          <a href="#services">Services</a>
-          <a href="#process">How it works</a>
-          <a href="#faq">FAQs</a>
-        </div>
-        <a className="button button-small" href="#quote">Get a quote <span>→</span></a>
-      </nav>
+      <SiteNav quoteHref="#quote" />
 
       <section className="hero" id="top">
         <div className="hero-copy">
@@ -129,7 +119,7 @@ export default function Home() {
       <footer>
         <a className="brand brand-footer" href="#top"><span className="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Commercial EPC <b>Direct</b></span></a>
         <p>Commercial energy assessments, made simple.</p>
-        <div className="footer-links"><a href="#services">Services</a><a href="#process">How it works</a><a href="#faq">FAQs</a><a href="/commercial-epc-york">Commercial EPC York</a><a href="#quote">Get a quote</a></div>
+        <div className="footer-links"><a href="#services">Services</a><a href="#faq">Guides</a><a href="#process">About</a><a href="/locations">Locations</a><a href="/commercial-epc-york">Commercial EPC York</a><a href="#quote">Get a quote</a></div>
         <small>© {new Date().getFullYear()} Commercial EPC Direct. All rights reserved.</small>
       </footer>
     </main>

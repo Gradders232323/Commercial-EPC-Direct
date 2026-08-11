@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import QuoteForm from "../quote-form";
+import SiteNav from "../site-nav";
 
 export const metadata: Metadata = {
   title: "Commercial EPC York | Fast Commercial EPC Certificates",
@@ -28,11 +29,7 @@ const audiences = [
 export default function CommercialEpcYork() {
   return (
     <main className="location-page">
-      <nav className="nav" aria-label="Main navigation">
-        <a className="brand" href="/" aria-label="Commercial EPC Direct home"><span className="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Commercial EPC <b>Direct</b></span></a>
-        <div className="nav-links"><a href="#services">Services</a><a href="#assessors">Assessors</a><a href="#areas">Areas covered</a><a href="#york-faq">FAQs</a></div>
-        <a className="button button-small" href="#top-enquiry">Get a quote <span>→</span></a>
-      </nav>
+      <SiteNav quoteHref="#top-enquiry" />
 
       <section className="location-hero" id="top">
         <div className="location-hero-copy">
@@ -148,7 +145,7 @@ export default function CommercialEpcYork() {
 
       <footer>
         <a className="brand brand-footer" href="/"><span className="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Commercial EPC <b>Direct</b></span></a><p>Commercial energy assessments, made simple.</p>
-        <div className="footer-links"><a href="/">Home</a><a href="#services">Services</a><a href="#assessors">Assessors</a><a href="#areas">Areas covered</a><a href="#york-faq">FAQs</a><a href="#york-quote">Get a quote</a></div>
+        <div className="footer-links"><a href="/">Home</a><a href="#services">Services</a><a href="#york-faq">Guides</a><a href="/#process">About</a><a href="/locations">Locations</a><a href="#york-quote">Get a quote</a></div>
         <small>© {new Date().getFullYear()} Commercial EPC Direct. All rights reserved.</small>
       </footer>
     </main>

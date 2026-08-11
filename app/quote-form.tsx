@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from "react";
 
-export default function QuoteForm() {
+export default function QuoteForm({ postcodePlaceholder = "e.g. SW1A 1AA" }: { postcodePlaceholder?: string }) {
   const [sent, setSent] = useState(false);
 
   function submit(event: FormEvent<HTMLFormElement>) {
@@ -17,7 +17,7 @@ export default function QuoteForm() {
   return (
     <form className="quote-form" onSubmit={submit}>
       <div className="form-step"><span>STEP 1 OF 1</span><b>Property details</b></div>
-      <label>Property postcode<input name="postcode" autoComplete="postal-code" placeholder="e.g. SW1A 1AA" required /></label>
+      <label>Property postcode<input name="postcode" autoComplete="postal-code" placeholder={postcodePlaceholder} required /></label>
       <label>Property type<select name="type" required defaultValue=""><option value="" disabled>Select property type</option><option>Office</option><option>Retail</option><option>Industrial / warehouse</option><option>Hospitality / leisure</option><option>Other commercial property</option></select></label>
       <div className="field-row">
         <label>Your name<input name="name" autoComplete="name" placeholder="Full name" required /></label>

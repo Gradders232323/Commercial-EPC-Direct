@@ -129,7 +129,7 @@ export default function Home() {
       <footer>
         <a className="brand brand-footer" href="#top"><span className="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Commercial EPC <b>Direct</b></span></a>
         <p>Commercial energy assessments, made simple.</p>
-        <div className="footer-links"><a href="#services">Services</a><a href="#process">How it works</a><a href="#faq">FAQs</a><a href="#quote">Get a quote</a></div>
+        <div className="footer-links"><a href="#services">Services</a><a href="#process">How it works</a><a href="#faq">FAQs</a><a href="/commercial-epc-york">Commercial EPC York</a><a href="#quote">Get a quote</a></div>
         <small>© {new Date().getFullYear()} Commercial EPC Direct. All rights reserved.</small>
       </footer>
     </main>

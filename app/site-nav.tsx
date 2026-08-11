@@ -3,6 +3,11 @@ import { services } from "./service-data";
 
 export default function SiteNav({ quoteHref = "/#quote" }: { quoteHref?: string }) {
   return (
+    <>
+    <div className="contact-bar">
+      <span>Nationwide commercial property assessments</span>
+      <div><a href="tel:08000000000"><i aria-hidden="true">☎</i> 0800 000 0000</a><a href="mailto:hello@commercialepcdirect.co.uk"><i aria-hidden="true">@</i> hello@commercialepcdirect.co.uk</a></div>
+    </div>
     <nav className="nav site-nav" aria-label="Main navigation">
       <a className="brand" href="/" aria-label="Commercial EPC Direct home"><span className="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Commercial EPC <b>Direct</b></span></a>
       <div className="nav-links nav-structured">
@@ -29,5 +34,6 @@ export default function SiteNav({ quoteHref = "/#quote" }: { quoteHref?: string 
         <a className="button button-small" href={quoteHref}>Get a quote <span>→</span></a>
       </div>
     </nav>
+    </>
   );
 }

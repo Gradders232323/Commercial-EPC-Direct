@@ -31,7 +31,7 @@ export default function CommercialEpcYork() {
       <nav className="nav" aria-label="Main navigation">
         <a className="brand" href="/" aria-label="Commercial EPC Direct home"><span className="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Commercial EPC <b>Direct</b></span></a>
         <div className="nav-links"><a href="#services">Services</a><a href="#assessors">Assessors</a><a href="#areas">Areas covered</a><a href="#york-faq">FAQs</a></div>
-        <a className="button button-small" href="#york-quote">Get a quote <span>→</span></a>
+        <a className="button button-small" href="#top-enquiry">Get a quote <span>→</span></a>
       </nav>
 
       <section className="location-hero" id="top">
@@ -40,7 +40,7 @@ export default function CommercialEpcYork() {
           <div className="eyebrow"><span></span> Commercial energy assessors in York</div>
           <h1>Commercial EPC<br/><em>York.</em></h1>
           <p className="hero-intro">Need a Commercial EPC in York? Gradwell Group provides professional Energy Performance Certificates for commercial and non-domestic properties throughout York and the surrounding area.</p>
-          <div className="hero-actions"><a className="button" href="#york-quote">Get your York EPC quote <span>→</span></a><a className="text-link" href="#services">View our service <span>↓</span></a></div>
+          <div className="hero-actions"><a className="button" href="#top-enquiry">Get your York EPC quote <span>→</span></a><a className="text-link" href="#services">View our service <span>↓</span></a></div>
           <div className="location-proof"><span>✓</span> Accredited assessors for offices, shops, warehouses and commercial property</div>
         </div>
 
@@ -51,7 +51,7 @@ export default function CommercialEpcYork() {
             <div className="map-label"><small>COMMERCIAL EPC</small><strong>York</strong><span>Local assessor network</span></div>
             <div className="map-road road-one"></div><div className="map-road road-two"></div><div className="map-road road-three"></div>
           </div>
-          <div className="york-card-foot"><span><i></i> Appointments available</span><a href="#york-quote">Request a quote →</a></div>
+          <div className="york-card-foot"><span><i></i> Appointments available</span><a href="#top-enquiry">Request a quote →</a></div>
         </aside>
       </section>
 
@@ -61,9 +61,14 @@ export default function CommercialEpcYork() {
         <div className="benefit"><span>03</span><div><strong>Accredited assessors</strong><p>Commercial energy specialists</p></div></div>
       </section>
 
+      <section className="quote-section enquiry-placement top-enquiry" id="top-enquiry">
+        <div className="quote-copy"><span className="kicker">Quick York EPC enquiry</span><h2>Get a quote for your property.</h2><p>Share a few basic details and we’ll prepare a quotation for your Commercial EPC assessment.</p><div className="quote-promise"><span>✓</span><div><strong>Fast response</strong><p>Clear next steps from our team.</p></div></div><div className="quote-promise"><span>✓</span><div><strong>No obligation</strong><p>Review your quote before you book.</p></div></div></div>
+        <QuoteForm postcodePlaceholder="e.g. YO1 7HD" formLabel="York property details" buttonLabel="Get my EPC quote" />
+      </section>
+
       <section className="section york-introduction">
         <span className="kicker">Commercial energy performance certificate York</span>
-        <div className="introduction-grid"><h2>The certificate you need, handled from start to finish.</h2><div><p>Whether you’re selling or letting a commercial property, renewing an existing EPC or need advice on your building’s energy rating, our commercial energy assessors can arrange the assessment and provide the required EPC certificate.</p><p>Tell us about your property and we’ll provide a quotation for your Commercial EPC in York.</p><a className="inline-arrow" href="#york-quote">Get a quote today <span>→</span></a></div></div>
+        <div className="introduction-grid"><h2>The certificate you need, handled from start to finish.</h2><div><p>Whether you’re selling or letting a commercial property, renewing an existing EPC or need advice on your building’s energy rating, our commercial energy assessors can arrange the assessment and provide the required EPC certificate.</p><p>Tell us about your property and we’ll provide a quotation for your Commercial EPC in York.</p><a className="inline-arrow" href="#top-enquiry">Get a quote today <span>→</span></a></div></div>
       </section>
 
       <section className="epc-services" id="services">
@@ -85,7 +90,7 @@ export default function CommercialEpcYork() {
           <p>In many circumstances, a valid EPC is required before a commercial property can be marketed for sale or rent.</p>
           <p>The exact requirements can depend on the building, how it is occupied and whether any exemptions apply.</p>
           <p>If you’re unsure whether your property requires an EPC, speak to our team and we can help establish what type of assessment is required.</p>
-          <a className="button" href="#york-quote">Ask about your property <span>→</span></a>
+          <a className="button" href="#mid-enquiry">Ask about your property <span>→</span></a>
         </div>
         <div className="requirement-note" aria-hidden="true"><small>COMMERCIAL PROPERTY</small><div className="energy-scale"><i>A+</i><i>A</i><i>B</i><i>C</i><i>D</i><i>E</i><i>F</i><i>G</i></div><strong>Energy<br/>performance,<br/><em>made clear.</em></strong></div>
       </section>
@@ -99,9 +104,14 @@ export default function CommercialEpcYork() {
       <section className="section practical-section">
         <div className="section-heading practical-heading"><div><span className="kicker">Planning your assessment</span><h2>Commercial EPC York cost and timescales.</h2></div><p>Every commercial building is different. We price the work around the property and help you plan around any sale, lease or other deadline.</p></div>
         <div className="practical-grid">
-          <article><span>01 / COST</span><h3>How much does a Commercial EPC cost in York?</h3><p>The cost depends on the size and complexity of the building. A small retail unit or office will typically require less assessment work than a large warehouse, industrial building or multi-storey commercial property.</p><p>Send us the property address and basic building information for an accurate quotation.</p><a href="#york-quote">Request your quote →</a></article>
-          <article><span>02 / TIMING</span><h3>How long does a Commercial EPC take?</h3><p>Straightforward commercial buildings can usually be surveyed relatively quickly, while larger properties with multiple heating, cooling or ventilation systems can require a more detailed assessment.</p><p>If you’re working towards a deadline, tell us when requesting your quotation so we can advise on availability.</p><a href="#york-quote">Tell us your deadline →</a></article>
+          <article><span>01 / COST</span><h3>How much does a Commercial EPC cost in York?</h3><p>The cost depends on the size and complexity of the building. A small retail unit or office will typically require less assessment work than a large warehouse, industrial building or multi-storey commercial property.</p><p>Send us the property address and basic building information for an accurate quotation.</p><a href="#mid-enquiry">Request your quote →</a></article>
+          <article><span>02 / TIMING</span><h3>How long does a Commercial EPC take?</h3><p>Straightforward commercial buildings can usually be surveyed relatively quickly, while larger properties with multiple heating, cooling or ventilation systems can require a more detailed assessment.</p><p>If you’re working towards a deadline, tell us when requesting your quotation so we can advise on availability.</p><a href="#mid-enquiry">Tell us your deadline →</a></article>
         </div>
+      </section>
+
+      <section className="quote-section enquiry-placement middle-enquiry" id="mid-enquiry">
+        <div className="quote-copy"><span className="kicker">Ready to arrange your assessment?</span><h2>Tell us what you need.</h2><p>Send the property details and let us know about any sale, lease or compliance deadline. We’ll confirm the right assessment and availability.</p><div className="quote-promise"><span>✓</span><div><strong>Property-specific price</strong><p>Based on size and complexity.</p></div></div><div className="quote-promise"><span>✓</span><div><strong>Deadline support</strong><p>Tell us when you need it.</p></div></div></div>
+        <QuoteForm postcodePlaceholder="e.g. YO1 7HD" formLabel="Assessment enquiry" buttonLabel="Request availability" />
       </section>
 
       <section className="professional-section">

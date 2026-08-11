@@ -4,7 +4,7 @@ import SocialLinks from "./social-links";
 import IndustryLogos from "./industry-logos";
 
 const benefits = [
-  ["Nationwide", "Accredited assessors across the UK"],
+  ["Nationwide", "Our in-house assessors across the UK"],
   ["Fixed price", "A clear quote with no hidden extras"],
   ["Direct support", "One team from booking to certificate"],
 ];
@@ -25,7 +25,7 @@ export default function Home() {
         <div className="hero-copy">
           <div className="eyebrow"><span></span> Commercial energy certificates, sorted.</div>
           <h1>Your commercial EPC.<br/><em>Without the runaround.</em></h1>
-          <p className="hero-intro">Fast, fixed-price commercial energy assessments from accredited local assessors—managed by one helpful team.</p>
+          <p className="hero-intro">Fast, fixed-price commercial energy assessments delivered directly by our own accredited, in-house team.</p>
           <div className="hero-actions">
             <a className="button" href="#quote">Get your instant quote <span>→</span></a>
             <a className="text-link" href="#process">See how it works <span>↓</span></a>
@@ -72,7 +72,7 @@ export default function Home() {
       <section className="section services" id="services">
         <div className="section-heading">
           <div><span className="kicker">Built for business</span><h2>Every kind of commercial space.</h2></div>
-          <p>Whether you manage one shop or a national portfolio, we match your property with the right accredited assessor and keep the process moving.</p>
+          <p>Whether you manage one shop or a national portfolio, your assessment is handled by our own appropriately qualified in-house team from start to finish.</p>
         </div>
         <div className="service-grid">
           {services.map(([title, copy], index) => (
@@ -94,7 +94,7 @@ export default function Home() {
         </div>
         <ol className="steps">
           <li><span>01</span><div><h3>Share your property</h3><p>Answer a few quick questions so we can price the right assessment.</p></div></li>
-          <li><span>02</span><div><h3>Book your visit</h3><p>Choose a convenient time for an accredited assessor to visit.</p></div></li>
+          <li><span>02</span><div><h3>Book your visit</h3><p>Choose a convenient time for one of our accredited in-house assessors to visit.</p></div></li>
           <li><span>03</span><div><h3>Receive your EPC</h3><p>We send your completed digital certificate straight to your inbox.</p></div></li>
         </ol>
       </section>

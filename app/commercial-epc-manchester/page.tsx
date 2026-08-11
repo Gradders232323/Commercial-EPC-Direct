@@ -41,7 +41,7 @@ export default function CommercialEpcManchester() {
           <h1>Commercial EPC<br/><em>Manchester.</em></h1>
           <p className="hero-intro">Gradwell Environmental provides professional Commercial Energy Performance Certificate assessments for offices, shops, warehouses, industrial units and other non-domestic properties throughout Manchester and Greater Manchester.</p>
           <div className="hero-actions"><a className="button" href="#manchester-top-enquiry">Get your Manchester quote <span>→</span></a><a className="text-link" href="#manchester-services">Explore the service <span>↓</span></a></div>
-          <div className="location-proof"><span>✓</span> Accredited assessors for city-centre, retail, warehouse and industrial property</div>
+          <div className="location-proof"><span>✓</span> Delivered directly by our accredited in-house assessors</div>
         </div>
         <aside className="manchester-coverage-card" aria-label="Commercial EPC coverage across Greater Manchester">
           <div className="manchester-card-head"><span>GREATER MANCHESTER</span><b>MCR</b></div>
@@ -54,7 +54,7 @@ export default function CommercialEpcManchester() {
       <section className="benefit-strip location-benefits">
         <div className="benefit"><span>01</span><div><strong>Greater Manchester coverage</strong><p>City centre to major industrial areas</p></div></div>
         <div className="benefit"><span>02</span><div><strong>Property-specific pricing</strong><p>Based on size and complexity</p></div></div>
-        <div className="benefit"><span>03</span><div><strong>Accredited assessors</strong><p>Commercial energy specialists</p></div></div>
+        <div className="benefit"><span>03</span><div><strong>In-house assessors</strong><p>Our accredited commercial specialists</p></div></div>
       </section>
       <IndustryLogos />
 
@@ -65,7 +65,7 @@ export default function CommercialEpcManchester() {
 
       <section className="section york-introduction">
         <span className="kicker">Commercial Energy Performance Certificates in Manchester</span>
-        <div className="introduction-grid"><h2>One service for a remarkably varied property market.</h2><div><p>Manchester combines major office districts, extensive retail areas, converted historic buildings, modern developments, industrial estates, logistics hubs and business parks.</p><p>From individual commercial units to larger buildings with multiple zones, uses and fixed services, we arrange the appropriate non-domestic assessment.</p><a className="inline-arrow" href="#manchester-top-enquiry">Request a Manchester quote <span>→</span></a></div></div>
+        <div className="introduction-grid"><h2>One service for a remarkably varied property market.</h2><div><p>Manchester combines major office districts, extensive retail areas, converted historic buildings, modern developments, industrial estates, logistics hubs and business parks.</p><p>From individual commercial units to larger buildings with multiple zones, uses and fixed services, the assessment is completed directly by our appropriately qualified in-house team.</p><a className="inline-arrow" href="#manchester-top-enquiry">Request a Manchester quote <span>→</span></a></div></div>
       </section>
 
       <section className="epc-services" id="manchester-services">
@@ -123,7 +123,7 @@ export default function CommercialEpcManchester() {
       </section>
 
       <section className="york-areas" id="manchester-areas">
-        <div className="areas-copy"><span className="kicker light">Commercial EPC coverage across Manchester</span><h2>Across the city, conurbation and major industrial corridors.</h2><p>Motorway connections including the M60, M62, M56, M602 and M61 support a substantial network of business parks, logistics sites and industrial estates.</p><p>We can coordinate individual instructions and multiple properties across Greater Manchester and the wider North West.</p><div className="why-choose"><strong>Why choose Gradwell Environmental?</strong><ul><li>Accredited commercial assessors</li><li>Experience across building types</li><li>Clear property-specific quotations</li><li>Single and portfolio instructions</li></ul></div><a className="button button-light" href="#manchester-quote">Check your property <span>→</span></a></div>
+        <div className="areas-copy"><span className="kicker light">Commercial EPC coverage across Manchester</span><h2>Across the city, conurbation and major industrial corridors.</h2><p>Motorway connections including the M60, M62, M56, M602 and M61 support a substantial network of business parks, logistics sites and industrial estates.</p><p>Our in-house team handles individual instructions and multiple properties across Greater Manchester and the wider North West.</p><div className="why-choose"><strong>Why choose Gradwell Environmental?</strong><ul><li>Our own accredited in-house assessors</li><li>No freelance assessor network</li><li>Clear property-specific quotations</li><li>Single and portfolio instructions</li></ul></div><a className="button button-light" href="#manchester-quote">Check your property <span>→</span></a></div>
         <div className="area-list">{areas.map((area, index) => <div key={area}><span>{String(index + 1).padStart(2, "0")}</span><strong>{area}</strong><i>↗</i></div>)}</div>
       </section>
 
@@ -136,13 +136,13 @@ export default function CommercialEpcManchester() {
         <div className="faq-title"><span className="kicker">Commercial EPC Manchester FAQs</span><h2>Useful answers before you book.</h2></div>
         <div className="faq-list">
           <details><summary>How much does a Commercial EPC cost in Manchester?<span>+</span></summary><p>The price depends on the property's size, type, construction and complexity. Send the address, approximate floor area and building type for a tailored quotation.</p></details>
-          <details><summary>How quickly can an assessment be arranged?<span>+</span></summary><p>Timescales depend on assessor availability and the building's complexity. Tell us if you are working towards a marketing, sale or letting deadline.</p></details>
+          <details><summary>How quickly can an assessment be arranged?<span>+</span></summary><p>Timescales depend on our in-house team’s availability and the building's complexity. Tell us if you are working towards a marketing, sale or letting deadline.</p></details>
           <details><summary>How long is a Commercial EPC valid?<span>+</span></summary><p>Commercial EPCs are generally valid for 10 years, or until replaced by a newer certificate.</p></details>
           <details><summary>Who can produce a Commercial EPC?<span>+</span></summary><p>The assessment must be completed by an appropriately qualified and accredited Non-Domestic Energy Assessor.</p></details>
-          <details><summary>Do you assess Manchester warehouses?<span>+</span></summary><p>Yes. We arrange assessments for warehouses, distribution units, storage facilities and other industrial properties across Greater Manchester.</p></details>
+          <details><summary>Do you assess Manchester warehouses?<span>+</span></summary><p>Yes. Our in-house team assesses warehouses, distribution units, storage facilities and other industrial properties across Greater Manchester.</p></details>
           <details><summary>Do you cover Trafford Park?<span>+</span></summary><p>Yes. We cover warehouses, manufacturing premises, trade units and other commercial buildings throughout Trafford Park.</p></details>
           <details><summary>Do you cover Salford and MediaCity?<span>+</span></summary><p>Yes. Coverage includes Salford, Salford Quays, MediaCity and surrounding commercial areas.</p></details>
-          <details><summary>Can you assess shops and offices?<span>+</span></summary><p>Yes. We arrange EPCs for individual offices, office buildings, shops, retail units, restaurants and other commercial premises.</p></details>
+          <details><summary>Can you assess shops and offices?<span>+</span></summary><p>Yes. Our in-house assessors cover individual offices, office buildings, shops, retail units, restaurants and other commercial premises.</p></details>
           <details><summary>What information helps with a quotation?<span>+</span></summary><p>The address, approximate floor area, property type, current use, number of floors, available plans and required timescale are all helpful.</p></details>
           <details><summary>Can you coordinate several properties?<span>+</span></summary><p>Yes. Send us the addresses and available property information and we can review a Manchester or regional portfolio.</p></details>
         </div>

@@ -7,7 +7,7 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 export const metadata: Metadata = {
   title: "Commercial EPC Direct | Fast, Fixed-Price Commercial EPCs",
-  description: "Commercial energy assessments made simple. Get a clear fixed-price quote and book an accredited assessor for your property.",
+  description: "Commercial energy assessments made simple. Get a clear fixed-price quote from our accredited in-house assessor team.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

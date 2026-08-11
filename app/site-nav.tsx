@@ -20,7 +20,7 @@ export default function SiteNav({ quoteHref = "/#quote" }: { quoteHref?: string 
         <details className="locations-nav">
           <summary>Locations <span>⌄</span></summary>
           <div className="locations-mega">
-            <div className="mega-intro"><span className="kicker">Nationwide coverage</span><strong>Find your local commercial EPC assessor.</strong><a href="/locations">Search all locations <span>→</span></a></div>
+            <div className="mega-intro"><span className="kicker">Nationwide coverage</span><strong>Our in-house commercial EPC team, across the UK.</strong><a href="/locations">Search all locations <span>→</span></a></div>
             <div className="mega-column"><small>POPULAR LOCATIONS</small>{popularLocations.map(city => <a key={city} href={city === "York" ? "/commercial-epc-york" : city === "Leeds" ? "/commercial-epc-leeds" : city === "Manchester" ? "/commercial-epc-manchester" : city === "Birmingham" ? "/commercial-epc-birmingham" : `/locations#${locationSlug(city)}`}>{city}<span>↗</span></a>)}</div>
             <div className="mega-regions"><small>BROWSE BY REGION</small><div>{locationRegions.map(region => <a key={region.slug} href={`/locations#${region.slug}`}>{region.name}</a>)}</div></div>
           </div>

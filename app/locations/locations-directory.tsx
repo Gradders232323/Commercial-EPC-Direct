@@ -29,7 +29,7 @@ export default function LocationsDirectory() {
             })}</div>
           </section>
         ))}
-        {!filtered.length && <div className="no-locations"><strong>No exact match yet.</strong><p>Send us the postcode and we’ll confirm assessor availability.</p><a className="button" href="#locations-enquiry">Check your postcode <span>→</span></a></div>}
+        {!filtered.length && <div className="no-locations"><strong>No exact match yet.</strong><p>Send us the postcode and we’ll confirm our in-house team’s availability.</p><a className="button" href="#locations-enquiry">Check your postcode <span>→</span></a></div>}
       </div>
     </div>
   );

@@ -40,14 +40,14 @@ export default function CommercialEpcYork() {
           <h1>Commercial EPC<br/><em>York.</em></h1>
           <p className="hero-intro">Need a Commercial EPC in York? Gradwell Group provides professional Energy Performance Certificates for commercial and non-domestic properties throughout York and the surrounding area.</p>
           <div className="hero-actions"><a className="button" href="#top-enquiry">Get your York EPC quote <span>→</span></a><a className="text-link" href="#services">View our service <span>↓</span></a></div>
-          <div className="location-proof"><span>✓</span> Accredited assessors for offices, shops, warehouses and commercial property</div>
+          <div className="location-proof"><span>✓</span> Delivered directly by our accredited in-house assessors</div>
         </div>
 
         <aside className="york-card" aria-label="Commercial EPC service coverage in York">
           <div className="york-card-head"><span>LOCAL COVERAGE</span><b>YORK</b></div>
           <div className="york-map" aria-hidden="true">
             <div className="map-grid"></div><span className="map-ring ring-one"></span><span className="map-ring ring-two"></span><span className="map-pin"><i></i></span>
-            <div className="map-label"><small>COMMERCIAL EPC</small><strong>York</strong><span>Local assessor network</span></div>
+            <div className="map-label"><small>COMMERCIAL EPC</small><strong>York</strong><span>Our in-house assessor team</span></div>
             <div className="map-road road-one"></div><div className="map-road road-two"></div><div className="map-road road-three"></div>
           </div>
           <div className="york-card-foot"><span><i></i> Appointments available</span><a href="#top-enquiry">Request a quote →</a></div>
@@ -57,7 +57,7 @@ export default function CommercialEpcYork() {
       <section className="benefit-strip location-benefits">
         <div className="benefit"><span>01</span><div><strong>York coverage</strong><p>Across the city and surrounding area</p></div></div>
         <div className="benefit"><span>02</span><div><strong>Competitive quotes</strong><p>Priced for your specific property</p></div></div>
-        <div className="benefit"><span>03</span><div><strong>Accredited assessors</strong><p>Commercial energy specialists</p></div></div>
+        <div className="benefit"><span>03</span><div><strong>In-house assessors</strong><p>Our accredited commercial specialists</p></div></div>
       </section>
 
       <IndustryLogos />
@@ -69,7 +69,7 @@ export default function CommercialEpcYork() {
 
       <section className="section york-introduction">
         <span className="kicker">Commercial energy performance certificate York</span>
-        <div className="introduction-grid"><h2>The certificate you need, handled from start to finish.</h2><div><p>Whether you’re selling or letting a commercial property, renewing an existing EPC or need advice on your building’s energy rating, our commercial energy assessors can arrange the assessment and provide the required EPC certificate.</p><p>Tell us about your property and we’ll provide a quotation for your Commercial EPC in York.</p><a className="inline-arrow" href="#top-enquiry">Get a quote today <span>→</span></a></div></div>
+        <div className="introduction-grid"><h2>The certificate you need, handled from start to finish.</h2><div><p>Whether you’re selling or letting a commercial property, renewing an existing EPC or need advice on your building’s energy rating, our own commercial energy assessors complete the assessment and provide the required EPC certificate.</p><p>We do not pass instructions to a freelance network. Tell us about your property and our in-house team will provide a quotation for your Commercial EPC in York.</p><a className="inline-arrow" href="#top-enquiry">Get a quote today <span>→</span></a></div></div>
       </section>
 
       <section className="epc-services" id="services">
@@ -124,7 +124,7 @@ export default function CommercialEpcYork() {
         <div className="areas-copy">
           <span className="kicker light">Commercial EPCs across York</span><h2>York-wide coverage, with support beyond the city.</h2>
           <p>We provide Commercial EPC assessments throughout York and surrounding North Yorkshire locations. If your property is outside York, send us the postcode and we can confirm coverage.</p>
-          <div className="why-choose"><strong>Why choose Gradwell Group?</strong><ul><li>Accredited commercial energy assessors</li><li>Competitive quotations</li><li>Fast appointment availability</li><li>Support for complex commercial properties</li></ul></div>
+          <div className="why-choose"><strong>Why choose Gradwell Group?</strong><ul><li>Our own accredited in-house assessors</li><li>No freelance assessor network</li><li>Fast appointment availability</li><li>Support for complex commercial properties</li></ul></div>
           <a className="button button-light" href="#york-quote">Check your property <span>→</span></a>
         </div>
         <div className="area-list">{areas.map((area, index) => <div key={area}><span>{String(index + 1).padStart(2, "0")}</span><strong>{area}</strong><i>↗</i></div>)}</div>
@@ -141,7 +141,7 @@ export default function CommercialEpcYork() {
           <details><summary>How long is a Commercial EPC valid for?<span>+</span></summary><p>A Commercial EPC is generally valid for 10 years, although a new assessment can be carried out earlier if required.</p></details>
           <details><summary>Can you provide an EPC for a shop in York?<span>+</span></summary><p>Yes. We can assess retail premises and other commercial properties throughout York.</p></details>
           <details><summary>Can you provide EPCs for offices?<span>+</span></summary><p>Yes. Commercial offices are one of the property types that can require a non-domestic EPC when being sold or let.</p></details>
-          <details><summary>Can you assess warehouses and industrial units?<span>+</span></summary><p>Yes. We can arrange EPC assessments for warehouses, industrial units and other larger commercial buildings.</p></details>
+          <details><summary>Can you assess warehouses and industrial units?<span>+</span></summary><p>Yes. Our in-house team completes EPC assessments for warehouses, industrial units and other larger commercial buildings.</p></details>
           <details><summary>What information do you need for a quote?<span>+</span></summary><p>The property address, approximate floor area, property type and reason the EPC is required will normally help us provide an accurate quotation.</p></details>
           <details><summary>Do you cover areas outside York?<span>+</span></summary><p>Yes. Coverage is available beyond York. Contact us with the property postcode to confirm availability.</p></details>
         </div>

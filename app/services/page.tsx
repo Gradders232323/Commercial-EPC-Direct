@@ -21,7 +21,7 @@ export default function ServicesPage() {
       </section>
       <IndustryLogos />
       <section className="section services-hub">
-        <div className="section-heading"><div><span className="kicker">Our services</span><h2>What does your property need?</h2></div><p>Choose a service to see what it covers, who it is for and how we arrange the assessment.</p></div>
+        <div className="section-heading"><div><span className="kicker">Our services</span><h2>What does your property need?</h2></div><p>Choose a service to see what it covers, who it is for and how our in-house team completes the assessment.</p></div>
         <div>{services.map((service, index) => <a key={service.slug} href={`/services/${service.slug}`}><span>0{index + 1}</span><h3>{service.title}</h3><p>{service.menuCopy}</p><i>→</i></a>)}</div>
       </section>
       <section className="quote-section" id="services-enquiry">

@@ -2,18 +2,48 @@
 
 import { FormEvent, useState } from "react";
 
+const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
+const WEB3FORMS_ACCESS_KEY = "9742b464-842e-4a46-be0d-9dfe4761011e";
+
 type QuoteFormProps = {
   postcodePlaceholder?: string;
   formLabel?: string;
   buttonLabel?: string;
+  sourceLabel?: string;
 };
 
-export default function QuoteForm({ postcodePlaceholder = "e.g. SW1A 1AA", formLabel = "Property details", buttonLabel = "Request my quote" }: QuoteFormProps) {
+export default function QuoteForm({ postcodePlaceholder = "e.g. SW1A 1AA", formLabel = "Property details", buttonLabel = "Request my quote", sourceLabel = "Commercial EPC Direct website" }: QuoteFormProps) {
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
 
-  function submit(event: FormEvent<HTMLFormElement>) {
+  async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSent(true);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+    formData.append("subject", `New enquiry — ${sourceLabel}`);
+    formData.append("from_name", "Commercial EPC Direct");
+    formData.append("Source", sourceLabel);
+    formData.append("Page URL", window.location.href);
+
+    setSending(true);
+    setError("");
+
+    try {
+      const response = await fetch(WEB3FORMS_ENDPOINT, { method: "POST", body: formData });
+      const result = await response.json() as { success?: boolean; message?: string };
+
+      if (!response.ok || !result.success) throw new Error(result.message || "The enquiry could not be sent.");
+
+      form.reset();
+      setSent(true);
+    } catch {
+      setError("We couldn’t send your enquiry just now. Please try again in a moment.");
+    } finally {
+      setSending(false);
+    }
   }
 
   if (sent) {
@@ -23,13 +53,15 @@ export default function QuoteForm({ postcodePlaceholder = "e.g. SW1A 1AA", formL
   return (
     <form className="quote-form" onSubmit={submit}>
       <div className="form-step"><span>QUICK ENQUIRY</span><b>{formLabel}</b></div>
+      <input type="checkbox" name="botcheck" className="form-botcheck" tabIndex={-1} autoComplete="off" aria-hidden="true" />
       <label>Property postcode<input name="postcode" autoComplete="postal-code" placeholder={postcodePlaceholder} required /></label>
       <label>Property type<select name="type" required defaultValue=""><option value="" disabled>Select property type</option><option>Office</option><option>Retail</option><option>Industrial / warehouse</option><option>Hospitality / leisure</option><option>Other commercial property</option></select></label>
       <div className="field-row">
         <label>Your name<input name="name" autoComplete="name" placeholder="Full name" required /></label>
         <label>Work email<input name="email" type="email" autoComplete="email" placeholder="you@company.co.uk" required /></label>
       </div>
-      <button className="button form-button" type="submit">{buttonLabel} <span>→</span></button>
+      {error && <p className="form-error" role="alert">{error}</p>}
+      <button className="button form-button" type="submit" disabled={sending}>{sending ? "Sending enquiry…" : buttonLabel} <span>{sending ? "·" : "→"}</span></button>
       <small>By continuing, you agree that we may contact you about this enquiry.</small>
     </form>
   );

@@ -63,7 +63,7 @@ export default function CommercialEpcYork() {
 
       <section className="quote-section enquiry-placement top-enquiry" id="top-enquiry">
         <div className="quote-copy"><span className="kicker">Quick York EPC enquiry</span><h2>Get a quote for your property.</h2><p>Share a few basic details and we’ll prepare a quotation for your Commercial EPC assessment.</p><div className="quote-promise"><span>✓</span><div><strong>Fast response</strong><p>Clear next steps from our team.</p></div></div><div className="quote-promise"><span>✓</span><div><strong>No obligation</strong><p>Review your quote before you book.</p></div></div></div>
-        <QuoteForm postcodePlaceholder="e.g. YO1 7HD" formLabel="York property details" buttonLabel="Get my EPC quote" />
+        <QuoteForm postcodePlaceholder="e.g. YO1 7HD" formLabel="York property details" buttonLabel="Get my EPC quote" sourceLabel="Commercial EPC York — top form" />
       </section>
 
       <section className="section york-introduction">
@@ -111,7 +111,7 @@ export default function CommercialEpcYork() {
 
       <section className="quote-section enquiry-placement middle-enquiry" id="mid-enquiry">
         <div className="quote-copy"><span className="kicker">Ready to arrange your assessment?</span><h2>Tell us what you need.</h2><p>Send the property details and let us know about any sale, lease or compliance deadline. We’ll confirm the right assessment and availability.</p><div className="quote-promise"><span>✓</span><div><strong>Property-specific price</strong><p>Based on size and complexity.</p></div></div><div className="quote-promise"><span>✓</span><div><strong>Deadline support</strong><p>Tell us when you need it.</p></div></div></div>
-        <QuoteForm postcodePlaceholder="e.g. YO1 7HD" formLabel="Assessment enquiry" buttonLabel="Request availability" />
+        <QuoteForm postcodePlaceholder="e.g. YO1 7HD" formLabel="Assessment enquiry" buttonLabel="Request availability" sourceLabel="Commercial EPC York — middle form" />
       </section>
 
       <section className="professional-section">
@@ -131,7 +131,7 @@ export default function CommercialEpcYork() {
 
       <section className="quote-section york-quote" id="york-quote">
         <div className="quote-copy"><span className="kicker">Get a Commercial EPC quote in York</span><h2>Tell us about your property.</h2><p>Send us the address, approximate floor area and property type, and we’ll provide a quotation for your assessment.</p><div className="quote-promise"><span>✓</span><div><strong>Accurate quotation</strong><p>Based on the property and scope.</p></div></div><div className="quote-promise"><span>✓</span><div><strong>Professional support</strong><p>For simple and complex buildings.</p></div></div></div>
-        <QuoteForm postcodePlaceholder="e.g. YO1 7HD" />
+        <QuoteForm postcodePlaceholder="e.g. YO1 7HD" sourceLabel="Commercial EPC York — bottom form" />
       </section>
 
       <section className="section faq" id="york-faq">

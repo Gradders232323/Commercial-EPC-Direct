@@ -22,6 +22,7 @@ export default function SocialLinks() {
         ))}
       </div>
     </div>
+    <div className="footer-legal"><a href="/privacy">Privacy notice</a></div>
     </>
   );
 }

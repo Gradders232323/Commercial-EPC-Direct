@@ -62,7 +62,7 @@ export default function QuoteForm({ postcodePlaceholder = "e.g. SW1A 1AA", formL
       </div>
       {error && <p className="form-error" role="alert">{error}</p>}
       <button className="button form-button" type="submit" disabled={sending}>{sending ? "Sending enquiry…" : buttonLabel} <span>{sending ? "·" : "→"}</span></button>
-      <small>By continuing, you agree that we may contact you about this enquiry.</small>
+      <small>By continuing, you agree that we may contact you about this enquiry. <a href="/privacy">Read our privacy notice.</a></small>
     </form>
   );
 }

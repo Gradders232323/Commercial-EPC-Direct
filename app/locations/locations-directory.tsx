@@ -24,8 +24,8 @@ export default function LocationsDirectory() {
           <section className="directory-region" id={region.slug} key={region.slug}>
             <header><span>{String(regionIndex + 1).padStart(2, "0")}</span><h2>{region.name}</h2><small>{region.cities.length} locations</small></header>
             <div className="city-grid">{region.cities.map(city => {
-              const isYork = city === "York";
-              return <a id={locationSlug(city)} key={city} className={isYork ? "city-live" : ""} href={isYork ? "/commercial-epc-york" : "#locations-enquiry"}><span>{city}</span><small>{isYork ? "View location page" : "Check coverage"}</small><i>→</i></a>;
+              const liveHref = city === "York" ? "/commercial-epc-york" : city === "Leeds" ? "/commercial-epc-leeds" : null;
+              return <a id={locationSlug(city)} key={city} className={liveHref ? "city-live" : ""} href={liveHref ?? "#locations-enquiry"}><span>{city}</span><small>{liveHref ? "View location page" : "Check coverage"}</small><i>→</i></a>;
             })}</div>
           </section>
         ))}

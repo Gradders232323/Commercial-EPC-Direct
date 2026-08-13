@@ -6,7 +6,7 @@ export default function SiteNav({ quoteHref = "/#quote" }: { quoteHref?: string 
     <>
     <div className="contact-bar">
       <span>Nationwide commercial property assessments</span>
-      <div><a href="tel:01827488063"><i aria-hidden="true">☎</i> 01827 488063</a><a href="mailto:admin@commercialepcdirect.co.uk"><i aria-hidden="true">@</i> admin@commercialepcdirect.co.uk</a></div>
+      <div><a href="tel:01827488063"><i aria-hidden="true">☎</i> 01827 488063</a><a href="mailto:admin@commercialepcdirect.co.uk"><i aria-hidden="true">Email</i> admin@commercialepcdirect.co.uk</a></div>
     </div>
     <nav className="nav site-nav" aria-label="Main navigation">
       <a className="brand" href="/" aria-label="Commercial EPC Direct home"><span className="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Commercial EPC <b>Direct</b></span></a>

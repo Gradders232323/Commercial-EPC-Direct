@@ -114,7 +114,7 @@ export default function PrivacyPage() {
         <section id="contact">
           <h2>8. Contact us and make a complaint</h2>
           <p>To ask a privacy question or exercise your rights, contact us using the details below. Please include enough information for us to understand and respond to your request.</p>
-          <div className="privacy-contact-card"><strong>Commercial EPC Direct</strong><p>Commercial property assessment services</p><p><a href="mailto:hello@commercialepcdirect.co.uk">hello@commercialepcdirect.co.uk</a></p><p><a href="tel:08000000000">0800 000 0000</a></p></div>
+          <div className="privacy-contact-card"><strong>Commercial EPC Direct</strong><p>Commercial property assessment services</p><p><a href="mailto:admin@commercialepcdirect.co.uk">admin@commercialepcdirect.co.uk</a></p><p><a href="tel:01827488063">01827 488063</a></p></div>
           <h3>Complaints</h3>
           <p>If you are unhappy with how we have handled your information, please contact us first so we can try to resolve the matter. You also have the right to complain to the Information Commissioner’s Office. Visit <a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noreferrer">ico.org.uk/make-a-complaint</a> for current contact details and guidance.</p>
           <h3>Changes to this notice</h3>

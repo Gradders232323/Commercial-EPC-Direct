@@ -7,6 +7,7 @@ const coreRoutes = [
   { path: "/services", priority: "0.9", changeFrequency: "monthly" },
   { path: "/guides", priority: "0.9", changeFrequency: "monthly" },
   { path: "/locations", priority: "0.9", changeFrequency: "weekly" },
+  { path: "/sitemap", priority: "0.4", changeFrequency: "monthly" },
   { path: "/about", priority: "0.7", changeFrequency: "monthly" },
   { path: "/privacy", priority: "0.3", changeFrequency: "yearly" },
 ];

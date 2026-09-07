@@ -93,8 +93,8 @@ export default function PrivacyPage() {
 
         <section id="cookies">
           <h2>6. Cookies and website data</h2>
-          <p>We may use essential storage or similar technology where it is required for website security and core operation. The website does not currently use advertising or behavioural-marketing cookies.</p>
-          <p>If we introduce non-essential analytics, advertising or similar technology, we will provide clear information and an appropriate consent choice before it is used where consent is required.</p>
+          <p>We use essential storage where it is required for website security and core operation. With your permission, we may also use analytics and advertising-measurement technologies to understand how the website is used, attribute enquiries and improve our marketing.</p>
+          <p>Optional analytics and advertising storage is denied by default. You can accept or reject non-essential cookies using the choice shown when you first visit. Your choice is saved on your device and communicated to our measurement tools.</p>
         </section>
 
         <section id="rights">

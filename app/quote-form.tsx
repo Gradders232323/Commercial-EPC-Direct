@@ -3,8 +3,8 @@
 import { FormEvent, useRef, useState } from "react";
 import { trackQuoteEvent } from "./tracking";
 
-const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
-const WEB3FORMS_ACCESS_KEY = "9742b464-842e-4a46-be0d-9dfe4761011e";
+export const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
+export const WEB3FORMS_ACCESS_KEY = "9742b464-842e-4a46-be0d-9dfe4761011e";
 
 type QuoteFormProps = {
   postcodePlaceholder?: string;

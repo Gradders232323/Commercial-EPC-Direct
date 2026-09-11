@@ -20,6 +20,7 @@ const locations = [
 
 const corePages = [
   ["Home", "/"],
+  ["Instant Quote & Booking", "/instant-quote-booking"],
   ["Services", "/services"],
   ["Guides", "/guides"],
   ["Locations", "/locations"],

@@ -2,6 +2,7 @@ import { locationRegions, locationSlug, popularLocations } from "./location-data
 import { services } from "./service-data";
 
 export default function SiteNav({ quoteHref = "/#quote" }: { quoteHref?: string }) {
+  const bookingHref = quoteHref === "#booking-form" ? quoteHref : "/instant-quote-booking";
   return (
     <>
     <div className="contact-bar">
@@ -29,9 +30,9 @@ export default function SiteNav({ quoteHref = "/#quote" }: { quoteHref?: string 
       <div className="nav-actions">
         <details className="mobile-nav">
           <summary aria-label="Open navigation"><i></i><i></i><i></i></summary>
-          <div className="mobile-nav-panel"><a className="mobile-quote-action" href={quoteHref}>Instant Quote &amp; Booking <span>→</span></a><a href="/services">All services</a>{services.map(service=><a key={service.slug} href={`/services/${service.slug}`}>{service.title}</a>)}<a href="/guides">Guides</a><a href="/about">About</a><a href="/locations">All locations</a><a href="/commercial-epc-york">Commercial EPC York</a><a href="/commercial-epc-leeds">Commercial EPC Leeds</a><a href="/commercial-epc-manchester">Commercial EPC Manchester</a><a href="/commercial-epc-birmingham">Commercial EPC Birmingham</a><a href="/commercial-epc-london">Commercial EPC London</a><a href="/commercial-epc-bristol">Commercial EPC Bristol</a><div><small>REGIONS</small>{locationRegions.slice(0,6).map(region => <a key={region.slug} href={`/locations#${region.slug}`}>{region.name}</a>)}</div></div>
+          <div className="mobile-nav-panel"><a className="mobile-quote-action" href={bookingHref}>Instant Quote &amp; Booking <span>→</span></a><a href="/services">All services</a>{services.map(service=><a key={service.slug} href={`/services/${service.slug}`}>{service.title}</a>)}<a href="/guides">Guides</a><a href="/about">About</a><a href="/locations">All locations</a><a href="/commercial-epc-york">Commercial EPC York</a><a href="/commercial-epc-leeds">Commercial EPC Leeds</a><a href="/commercial-epc-manchester">Commercial EPC Manchester</a><a href="/commercial-epc-birmingham">Commercial EPC Birmingham</a><a href="/commercial-epc-london">Commercial EPC London</a><a href="/commercial-epc-bristol">Commercial EPC Bristol</a><div><small>REGIONS</small>{locationRegions.slice(0,6).map(region => <a key={region.slug} href={`/locations#${region.slug}`}>{region.name}</a>)}</div></div>
         </details>
-        <a className="button button-small instant-quote-button" href={quoteHref}>Instant Quote &amp; Booking <span>→</span></a>
+        <a className="button button-small instant-quote-button" href={bookingHref}>Instant Quote &amp; Booking <span>→</span></a>
       </div>
     </nav>
     </>

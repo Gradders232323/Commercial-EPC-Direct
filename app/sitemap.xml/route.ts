@@ -4,6 +4,7 @@ const baseUrl = "https://www.commercialepcdirect.co.uk";
 
 const coreRoutes = [
   { path: "", priority: "1.0", changeFrequency: "weekly" },
+  { path: "/instant-quote-booking", priority: "0.9", changeFrequency: "monthly" },
   { path: "/services", priority: "0.9", changeFrequency: "monthly" },
   { path: "/guides", priority: "0.9", changeFrequency: "monthly" },
   { path: "/locations", priority: "0.9", changeFrequency: "weekly" },

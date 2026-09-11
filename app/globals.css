@@ -22,6 +22,7 @@ button { color:inherit; }
 .button:hover { transform:translateY(-2px); box-shadow:0 9px 22px rgba(20,48,39,.15); background:#e7ff75; }
 .button span { font-size:21px; line-height:.6; }
 .button-small { padding:12px 15px; gap:20px; }
+.instant-quote-button{white-space:nowrap}.mobile-nav-panel>a.mobile-quote-action{align-items:center;justify-content:space-between;margin-bottom:10px;padding:14px 15px;background:var(--lime);border:0;border-radius:4px;color:var(--deep)}.mobile-quote-action span{font-size:20px;line-height:1}
 .hero { min-height:668px; background:var(--green); color:var(--white); display:grid; grid-template-columns:1.1fr .9fr; gap:7vw; padding:84px clamp(24px,7vw,108px) 76px; overflow:hidden; position:relative; }
 .hero:before { content:""; position:absolute; width:520px; height:520px; border:1px solid rgba(255,255,255,.07); border-radius:50%; right:-210px; bottom:-240px; box-shadow:0 0 0 70px rgba(255,255,255,.025),0 0 0 140px rgba(255,255,255,.018); }
 .hero-copy,.hero-card { position:relative; z-index:1; }

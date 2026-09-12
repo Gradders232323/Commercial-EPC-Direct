@@ -9,6 +9,8 @@ type TrackingWindow = Window & {
 
 export const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 export const WEB3FORMS_ACCESS_KEY = "9742b464-842e-4a46-be0d-9dfe4761011e";
+export const GRADWELL_OS_WEBHOOK =
+  "https://gradwell-web3forms-gateway.soft-cake-36e6.workers.dev/web3forms/commercial_epc/fd01f5cdd51407873c52d5c93577a9cb8e005db29a34d1a975e711f2b12fc11d";
 
 type QuoteFormProps = {
   postcodePlaceholder?: string;
@@ -27,8 +29,8 @@ export default function QuoteForm({
   buttonLabel = "Request my quote",
   sourceLabel = "Commercial EPC Direct website",
   accessKey = WEB3FORMS_ACCESS_KEY,
-  businessKey,
-  formId,
+  businessKey = "commercial_epc",
+  formId = "commercial_epc_direct_quote",
   city,
 }: QuoteFormProps) {
   const [sent, setSent] = useState(false);
@@ -52,12 +54,14 @@ export default function QuoteForm({
     const details = String(formData.get("details") || "").trim();
 
     formData.set("access_key", accessKey);
-    formData.set("subject", `New enquiry â ${sourceLabel}`);
+    formData.set("webhook", GRADWELL_OS_WEBHOOK);
+    formData.set("subject", `New enquiry — ${sourceLabel}`);
     formData.set("from_name", city ? `${city} Commercial EPC website` : "Commercial EPC Direct");
     formData.set("Source", sourceLabel);
     formData.set("Page URL", pageUrl.href);
     formData.set("page_url", pageUrl.href);
     formData.set("submitted_at", new Date().toISOString());
+    formData.set("service", "Commercial EPC");
     formData.set("property_address", [addressLine, postcode].filter(Boolean).join(", "));
     if (details) formData.set("message", details);
     if (businessKey) formData.set("business_key", businessKey);
@@ -90,14 +94,14 @@ export default function QuoteForm({
       setSent(true);
     } catch {
       trackQuoteEvent("form_error", sourceLabel);
-      setError("We couldnât send your enquiry just now. Please try again in a moment.");
+      setError("We couldn’t send your enquiry just now. Please try again in a moment.");
     } finally {
       setSending(false);
     }
   }
 
   if (sent) {
-    return <div className="quote-form success" role="status"><span>â</span><h3>Thanks â we have your details.</h3><p>A member of the Commercial EPC Direct team will be in touch with your quote.</p><button className="text-link" onClick={() => setSent(false)}>Submit another property</button></div>;
+    return <div className="quote-form success" role="status"><span>✓</span><h3>Thanks — we have your details.</h3><p>A member of the Commercial EPC Direct team will be in touch with your quote.</p><button className="text-link" onClick={() => setSent(false)}>Submit another property</button></div>;
   }
 
   return (
@@ -116,7 +120,7 @@ export default function QuoteForm({
       </div>
       <label>Property details or required timescale<textarea name="details" placeholder="Property type, approximate floor area and when the EPC is needed" style={{ display: "block", width: "100%", minHeight: 92, marginTop: 8, border: "1px solid #cbd5d0", background: "#fbfcfb", padding: "14px 15px", borderRadius: 3, color: "var(--ink)", font: "inherit", resize: "vertical" }} /></label>
       {error && <p className="form-error" role="alert">{error}</p>}
-      <button className="button form-button" type="submit" disabled={sending}>{sending ? "Sending enquiryâ¦" : buttonLabel} <span>{sending ? "Â·" : "â"}</span></button>
+      <button className="button form-button" type="submit" disabled={sending}>{sending ? "Sending enquiry…" : buttonLabel} <span>{sending ? "·" : "→"}</span></button>
       <small>By continuing, you agree that we may contact you about this enquiry. <a href="/privacy">Read our privacy notice.</a></small>
     </form>
   );

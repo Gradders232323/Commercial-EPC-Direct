@@ -3,6 +3,10 @@
 import { FormEvent, useRef, useState } from "react";
 import { trackQuoteEvent } from "./tracking";
 
+type TrackingWindow = Window & {
+  gtag?: (...args: unknown[]) => void;
+};
+
 export const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 export const WEB3FORMS_ACCESS_KEY = "9742b464-842e-4a46-be0d-9dfe4761011e";
 
@@ -11,9 +15,22 @@ type QuoteFormProps = {
   formLabel?: string;
   buttonLabel?: string;
   sourceLabel?: string;
+  accessKey?: string;
+  businessKey?: string;
+  formId?: string;
+  city?: string;
 };
 
-export default function QuoteForm({ postcodePlaceholder = "e.g. SW1A 1AA", formLabel = "Property details", buttonLabel = "Request my quote", sourceLabel = "Commercial EPC Direct website" }: QuoteFormProps) {
+export default function QuoteForm({
+  postcodePlaceholder = "e.g. SW1A 1AA",
+  formLabel = "Property details",
+  buttonLabel = "Request my quote",
+  sourceLabel = "Commercial EPC Direct website",
+  accessKey = WEB3FORMS_ACCESS_KEY,
+  businessKey,
+  formId,
+  city,
+}: QuoteFormProps) {
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
@@ -29,12 +46,28 @@ export default function QuoteForm({ postcodePlaceholder = "e.g. SW1A 1AA", formL
     event.preventDefault();
     const form = event.currentTarget;
     const formData = new FormData(form);
+    const pageUrl = new URL(window.location.href);
+    const addressLine = String(formData.get("address_line_1") || "").trim();
+    const postcode = String(formData.get("postcode") || "").trim();
+    const details = String(formData.get("details") || "").trim();
 
-    formData.append("access_key", WEB3FORMS_ACCESS_KEY);
-    formData.append("subject", `New enquiry — ${sourceLabel}`);
-    formData.append("from_name", "Commercial EPC Direct");
-    formData.append("Source", sourceLabel);
-    formData.append("Page URL", window.location.href);
+    formData.set("access_key", accessKey);
+    formData.set("subject", `New enquiry — ${sourceLabel}`);
+    formData.set("from_name", city ? `${city} Commercial EPC website` : "Commercial EPC Direct");
+    formData.set("Source", sourceLabel);
+    formData.set("Page URL", pageUrl.href);
+    formData.set("page_url", pageUrl.href);
+    formData.set("submitted_at", new Date().toISOString());
+    formData.set("property_address", [addressLine, postcode].filter(Boolean).join(", "));
+    if (details) formData.set("message", details);
+    if (businessKey) formData.set("business_key", businessKey);
+    if (formId) formData.set("form_id", formId);
+    if (city) formData.set("city", city);
+
+    for (const key of ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "gbraid", "wbraid"]) {
+      const value = pageUrl.searchParams.get(key);
+      if (value) formData.set(key, value);
+    }
 
     setSending(true);
     setError("");
@@ -47,6 +80,13 @@ export default function QuoteForm({ postcodePlaceholder = "e.g. SW1A 1AA", formL
 
       form.reset();
       trackQuoteEvent("generate_lead", sourceLabel);
+      if (formId) {
+        (window as TrackingWindow).gtag?.("event", "generate_lead", {
+          form_id: formId,
+          service: "Commercial EPC",
+          city,
+        });
+      }
       setSent(true);
     } catch {
       trackQuoteEvent("form_error", sourceLabel);
@@ -68,8 +108,13 @@ export default function QuoteForm({ postcodePlaceholder = "e.g. SW1A 1AA", formL
       <label>First line of address<input name="address_line_1" autoComplete="address-line1" placeholder="Building number and street" required /></label>
       <div className="field-row">
         <label>Your name<input name="name" autoComplete="name" placeholder="Full name" required /></label>
-        <label>Email<input name="email" type="email" autoComplete="email" placeholder="you@example.com" required /></label>
+        <label>Company<input name="company" autoComplete="organization" placeholder="Company name" /></label>
       </div>
+      <div className="field-row">
+        <label>Email<input name="email" type="email" autoComplete="email" placeholder="you@example.com" required /></label>
+        <label>Phone number<input name="phone" type="tel" autoComplete="tel" placeholder="0113 ..." required /></label>
+      </div>
+      <label>Property details or required timescale<textarea name="details" placeholder="Property type, approximate floor area and when the EPC is needed" /></label>
       {error && <p className="form-error" role="alert">{error}</p>}
       <button className="button form-button" type="submit" disabled={sending}>{sending ? "Sending enquiry…" : buttonLabel} <span>{sending ? "·" : "→"}</span></button>
       <small>By continuing, you agree that we may contact you about this enquiry. <a href="/privacy">Read our privacy notice.</a></small>

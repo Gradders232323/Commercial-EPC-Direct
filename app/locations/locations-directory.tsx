@@ -18,7 +18,7 @@ export default function LocationsDirectory() {
         <label htmlFor="location-search">Find a town or city</label>
         <div><span aria-hidden="true">⌕</span><input id="location-search" type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder="Try York, Manchester or Bristol" autoComplete="off" /><small>{count} {count === 1 ? "location" : "locations"}</small></div>
       </div>
-      <div className="region-jumps" aria-label="Jump to region">{locationRegions.map((region => <a key={region.slug} href={`#${region.slug}`}>{region.name}</a>)}</div>
+      <div className="region-jumps" aria-label="Jump to region">{locationRegions.map(region => <a key={region.slug} href={`#${region.slug}`}>{region.name}</a>)}</div>
       <div className="region-results" aria-live="polite">
         {filtered.map((region, regionIndex) => (
           <section className="directory-region" id={region.slug} key={region.slug}>

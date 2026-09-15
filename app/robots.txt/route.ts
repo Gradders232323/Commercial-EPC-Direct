@@ -1,11 +1,10 @@
-const baseUrl = "https://www.commercialepcdirect.co.uk";
+const baseUrl = "https://commercialepcleeds.co.uk";
 
 export function GET() {
   const body = [
     "User-agent: *",
     "Allow: /",
     `Sitemap: ${baseUrl}/sitemap.xml`,
-    `Host: ${baseUrl}`,
     "",
   ].join("\n");
 

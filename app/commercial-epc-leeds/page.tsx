@@ -23,7 +23,7 @@ const sectorDetails = [
   { number: "04", title: "Industrial property", copy: "Support for light industrial units, manufacturing premises, workshops, engineering units and standalone buildings on Leeds business parks and industrial estates.", items: ["Manufacturing premises", "Workshops", "Engineering units", "Industrial estates"] },
 ];
 const audiences = [
-  ["Commercial landlords", "Arrange EPC sessments before marketing or reletting commercial premises."],
+  ["Commercial landlords", "Arrange EPC assessments before marketing or reletting commercial premises."],
   ["Property managers", "Manage EPC requirements across individual buildings or wider portfolio."],
   ["Commercial agents", "Arrange certificates for properties being prepared for sale or lease."],
   ["Solicitors & professionals", "Obtain EPC documentation for commercial property transactions."],

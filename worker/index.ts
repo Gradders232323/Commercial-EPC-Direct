@@ -2,6 +2,8 @@
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
 
+const canonicalHost = "commercialepcleeds.co.uk";
+
 interface Env {
   ASSETS: Fetcher;
   DB: D1Database;
@@ -28,6 +30,27 @@ interface ExecutionContext {
 const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
+    const forwardedProtocol = request.headers.get("x-forwarded-proto");
+    const isInsecure = url.protocol !== "https:" || forwardedProtocol === "http";
+    const isDuplicateHomepage = /^\/commercial-epc-leeds\/?$/.test(url.pathname);
+    const isCopiedLocationPage =
+      /^\/commercial-epc-(birmingham|bristol|london|manchester|york)\/?$/.test(
+        url.pathname,
+      );
+
+    if (isDuplicateHomepage) url.pathname = "/";
+    if (isCopiedLocationPage) url.pathname = "/locations";
+
+    if (
+      url.hostname === `www.${canonicalHost}` ||
+      (url.hostname === canonicalHost &&
+        (isInsecure || isDuplicateHomepage || isCopiedLocationPage))
+    ) {
+      url.protocol = "https:";
+      url.hostname = canonicalHost;
+      url.port = "";
+      return Response.redirect(url.toString(), 308);
+    }
 
     if (url.pathname === "/_vinext/image") {
       const allowedWidths = [...DEFAULT_DEVICE_SIZES, ...DEFAULT_IMAGE_SIZES];

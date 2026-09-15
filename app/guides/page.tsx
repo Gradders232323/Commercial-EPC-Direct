@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Commercial EPC Guides | Requirements, Costs, Ratings and MEES",
   description: "Straightforward commercial EPC guidance for landlords, agents and businesses: requirements, validity, costs, ratings, MEES and assessment preparation.",
   alternates: { canonical: "/guides" },
-  openGraph: { title: "Commercial EPC Guides", description: "Practical guidance for commercial property owners, landlords and agents.", url: "https://www.commercialepcdirect.co.uk/guides", images: [{ url: "https://www.commercialepcdirect.co.uk/og.png", width: 1731, height: 909, alt: "Commercial EPC Direct" }] },
+  openGraph: { title: "Commercial EPC Guides", description: "Practical guidance for commercial property owners, landlords and agents.", url: "https://commercialepcleeds.co.uk/guides", images: [{ url: "https://commercialepcleeds.co.uk/og.png", width: 1731, height: 909, alt: "Commercial EPC Direct" }] },
 };
 
 const guideCards = [

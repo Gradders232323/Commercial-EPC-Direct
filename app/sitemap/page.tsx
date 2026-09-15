@@ -10,12 +10,7 @@ export const metadata: Metadata = {
 };
 
 const locations = [
-  ["London", "commercial-epc-london"],
-  ["Birmingham", "commercial-epc-birmingham"],
-  ["Manchester", "commercial-epc-manchester"],
-  ["Leeds", "commercial-epc-leeds"],
-  ["York", "commercial-epc-york"],
-  ["Bristol", "commercial-epc-bristol"],
+  ["Leeds", ""],
 ] as const;
 
 const corePages = [
@@ -46,7 +41,7 @@ export default function SitemapPage() {
         <div className="html-sitemap-grid">
           <section><h2>Core pages</h2><LinkList links={corePages} /></section>
           <section><h2>Services</h2><LinkList links={services.map(service => [service.title, `/services/${service.slug}`] as const)} /></section>
-          <section><h2>Locations</h2><LinkList links={locations.map(([name, slug]) => [name, `/${slug}`] as const)} /></section>
+          <section><h2>Locations</h2><LinkList links={locations.map(([name, slug]) => [name, slug ? `/${slug}` : "/"] as const)} /></section>
         </div>
       </section>
       <footer>

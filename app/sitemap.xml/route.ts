@@ -1,6 +1,6 @@
 import { services } from "../service-data";
 
-const baseUrl = "https://www.commercialepcdirect.co.uk";
+const baseUrl = "https://commercialepcleeds.co.uk";
 
 const coreRoutes = [
   { path: "", priority: "1.0", changeFrequency: "weekly" },
@@ -13,15 +13,6 @@ const coreRoutes = [
   { path: "/privacy", priority: "0.3", changeFrequency: "yearly" },
 ];
 
-const locationSlugs = [
-  "commercial-epc-london",
-  "commercial-epc-birmingham",
-  "commercial-epc-manchester",
-  "commercial-epc-leeds",
-  "commercial-epc-york",
-  "commercial-epc-bristol",
-];
-
 export function GET() {
   const serviceRoutes = services.map(service => ({
     path: `/services/${service.slug}`,
@@ -29,13 +20,7 @@ export function GET() {
     changeFrequency: "monthly",
   }));
 
-  const locationRoutes = locationSlugs.map(slug => ({
-    path: `/${slug}`,
-    priority: "0.8",
-    changeFrequency: "monthly",
-  }));
-
-  const urls = [...coreRoutes, ...serviceRoutes, ...locationRoutes]
+  const urls = [...coreRoutes, ...serviceRoutes]
     .map(route => `  <url>\n    <loc>${baseUrl}${route.path}</loc>\n    <changefreq>${route.changeFrequency}</changefreq>\n    <priority>${route.priority}</priority>\n  </url>`)
     .join("\n");
 

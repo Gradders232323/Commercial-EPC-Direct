@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type ConsentChoice = "granted" | "denied";
 type TrackingWindow = Window & {
@@ -32,16 +32,42 @@ function updateConsent(choice: ConsentChoice) {
     ad_user_data: choice,
     ad_personalization: choice,
   });
+}
 
+function sendPageView() {
+  const trackingWindow = window as TrackingWindow;
+  trackingWindow.gtag?.("event", "page_view", {
+    page_title: document.title,
+    page_location: window.location.href,
+    page_path: `${window.location.pathname}${window.location.search}`,
+  });
 }
 
 export default function Tracking() {
   const [showConsent, setShowConsent] = useState(false);
+  const [consentReady, setConsentReady] = useState(false);
+  const pageViewConsent = useRef<ConsentChoice | null>(null);
 
   useEffect(() => {
-    const savedChoice = window.localStorage.getItem(STORAGE_KEY) as ConsentChoice | null;
-    if (savedChoice) updateConsent(savedChoice);
-    else window.setTimeout(() => setShowConsent(true), 0);
+    let storedChoice: string | null = null;
+    try {
+      storedChoice = window.localStorage.getItem(STORAGE_KEY);
+    } catch {
+      // Keep consent denied if this browser does not allow local storage.
+    }
+    const savedChoice =
+      storedChoice === "granted" || storedChoice === "denied"
+        ? storedChoice
+        : null;
+
+    if (savedChoice) {
+      updateConsent(savedChoice);
+      sendPageView();
+      pageViewConsent.current = savedChoice;
+    } else {
+      window.setTimeout(() => setShowConsent(true), 0);
+    }
+    window.setTimeout(() => setConsentReady(true), 0);
 
     function trackContactClick(event: MouseEvent) {
       const link = (event.target as Element | null)?.closest("a");
@@ -55,12 +81,48 @@ export default function Tracking() {
   }, []);
 
   function choose(choice: ConsentChoice) {
-    window.localStorage.setItem(STORAGE_KEY, choice);
+    try {
+      window.localStorage.setItem(STORAGE_KEY, choice);
+    } catch {
+      // Apply the choice for this page even if it cannot be persisted.
+    }
     updateConsent(choice);
+    if (pageViewConsent.current !== choice) {
+      sendPageView();
+      pageViewConsent.current = choice;
+    }
     setShowConsent(false);
   }
 
-  if (!showConsent) return null;
+  if (!consentReady) return null;
+
+  if (!showConsent) {
+    return (
+      <button
+        type="button"
+        className="consent-manage"
+        style={{
+          position: "fixed",
+          zIndex: 900,
+          left: 14,
+          bottom: 14,
+          border: "1px solid rgba(13,45,37,.22)",
+          background: "rgba(255,255,255,.96)",
+          color: "#0d2d25",
+          borderRadius: 4,
+          padding: "8px 10px",
+          font: "inherit",
+          fontSize: 10,
+          fontWeight: 700,
+          cursor: "pointer",
+          boxShadow: "0 8px 24px rgba(5,25,19,.12)",
+        }}
+        onClick={() => setShowConsent(true)}
+      >
+        Cookie settings
+      </button>
+    );
+  }
 
   return (
     <aside className="consent-banner" aria-label="Cookie choices">

@@ -19,6 +19,12 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Commercial EPC Leeds | Local Commercial EPC Assessors",
+    description: "Commercial energy assessments across Leeds and West Yorkshire.",
+    images: ["https://commercialepcleeds.co.uk/og.png"],
+  },
 };
 
 export default CommercialEpcLeeds;

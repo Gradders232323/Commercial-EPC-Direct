@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "About Commercial EPC Direct | Our In-House Assessment Team",
   description: "Meet the in-house team behind Commercial EPC Direct and learn how we deliver straightforward commercial property assessments across the UK.",
   alternates: { canonical: "/about" },
-  openGraph: { title: "About Commercial EPC Direct", description: "Commercial property assessments delivered directly by our own in-house team.", url: "https://www.commercialepcdirect.co.uk/about", images: [{ url: "https://www.commercialepcdirect.co.uk/og.png", width: 1731, height: 909, alt: "Commercial EPC Direct" }] },
+  openGraph: { title: "About Commercial EPC Direct", description: "Commercial property assessments delivered directly by our own in-house team.", url: "https://commercialepcleeds.co.uk/about", images: [{ url: "https://commercialepcleeds.co.uk/og.png", width: 1731, height: 909, alt: "Commercial EPC Direct" }] },
 };
 
 const services = [
@@ -74,7 +74,7 @@ export default function AboutPage() {
     </section>
 
     <section className="about-coverage">
-      <div><span className="kicker light">Nationwide coverage</span><h2>Local property knowledge. One national standard.</h2><p>Our in-house team supports commercial properties across the UK, from city-centre offices and high-street retail to business parks, warehouses and industrial estates.</p><div className="about-city-links"><a href="/commercial-epc-london">London</a><a href="/commercial-epc-birmingham">Birmingham</a><a href="/commercial-epc-manchester">Manchester</a><a href="/commercial-epc-leeds">Leeds</a><a href="/commercial-epc-york">York</a><a href="/commercial-epc-bristol">Bristol</a></div><a className="button button-light" href="/locations">Explore all locations <span>→</span></a></div>
+      <div><span className="kicker light">Nationwide coverage</span><h2>Local property knowledge. One national standard.</h2><p>Our in-house team supports commercial properties across the UK, from city-centre offices and high-street retail to business parks, warehouses and industrial estates.</p><div className="about-city-links"><a href="/locations#london">London</a><a href="/locations#birmingham">Birmingham</a><a href="/locations#manchester">Manchester</a><a href="/">Leeds</a><a href="/locations#york">York</a><a href="/locations#bristol">Bristol</a></div><a className="button button-light" href="/locations">Explore all locations <span>→</span></a></div>
       <div className="about-coverage-graphic" aria-hidden="true"><strong>UK</strong><span>12 regions</span><div><i></i><i></i><i></i><i></i><i></i></div><small>One Commercial EPC Direct team</small></div>
     </section>
 

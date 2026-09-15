@@ -8,8 +8,9 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://commercialepcleeds.co.uk"),
-  title: "Commercial EPC Direct | Fast, Fixed-Price Commercial EPCs",
-  description: "Commercial energy assessments made simple. Get a clear fixed-price quote from our accredited in-house assessor team.",
+  title: "Commercial EPC Leeds | Local Commercial EPC Assessors",
+  description:
+    "Commercial EPC assessments for offices, shops, warehouses and other non-domestic property across Leeds and West Yorkshire.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -19,17 +20,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <script
           dangerouslySetInnerHTML={{
             __html:
-              "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});",
-          }}
-        />
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-J8DBCT65BY"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html:
-              "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-J8DBCT65BY');",
+              "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}var consentChoice='denied';try{var savedConsent=localStorage.getItem('commercial_epc_consent_v1');if(savedConsent==='granted'||savedConsent==='denied')consentChoice=savedConsent;}catch(e){}gtag('consent','default',{analytics_storage:consentChoice,ad_storage:consentChoice,ad_user_data:consentChoice,ad_personalization:consentChoice,wait_for_update:2000});gtag('js',new Date());gtag('config','G-J8DBCT65BY',{send_page_view:false});var ga=document.createElement('script');ga.async=true;ga.src='https://www.googletagmanager.com/gtag/js?id=G-J8DBCT65BY';document.head.appendChild(ga);",
           }}
         />
         <script

@@ -18,13 +18,13 @@ export default function LocationsDirectory() {
         <label htmlFor="location-search">Find a town or city</label>
         <div><span aria-hidden="true">⌕</span><input id="location-search" type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder="Try York, Manchester or Bristol" autoComplete="off" /><small>{count} {count === 1 ? "location" : "locations"}</small></div>
       </div>
-      <div className="region-jumps" aria-label="Jump to region">{locationRegions.map(region => <a key={region.slug} href={`#${region.slug}`}>{region.name}</a>)}</div>
+      <div className="region-jumps" aria-label="Jump to region">{locationRegions.map((region => <a key={region.slug} href={`#${region.slug}`}>{region.name}</a>)}</div>
       <div className="region-results" aria-live="polite">
         {filtered.map((region, regionIndex) => (
           <section className="directory-region" id={region.slug} key={region.slug}>
             <header><span>{String(regionIndex + 1).padStart(2, "0")}</span><h2>{region.name}</h2><small>{region.cities.length} locations</small></header>
             <div className="city-grid">{region.cities.map(city => {
-              const liveHref = city === "York" ? "/commercial-epc-york" : city === "Leeds" ? "/commercial-epc-leeds" : city === "Manchester" ? "/commercial-epc-manchester" : city === "Birmingham" ? "/commercial-epc-birmingham" : city === "London" ? "/commercial-epc-london" : city === "Bristol" ? "/commercial-epc-bristol" : null;
+              const liveHref = city === "Leeds" ? "/" : null;
               return <a id={locationSlug(city)} key={city} className={liveHref ? "city-live" : ""} href={liveHref ?? "#locations-enquiry"}><span>{city}</span><small>{liveHref ? "View location page" : "Check coverage"}</small><i>→</i></a>;
             })}</div>
           </section>

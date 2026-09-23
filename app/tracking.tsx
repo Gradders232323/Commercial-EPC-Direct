@@ -72,7 +72,13 @@ export default function Tracking() {
     function trackContactClick(event: MouseEvent) {
       const link = (event.target as Element | null)?.closest("a");
       const href = link?.getAttribute("href") || "";
-      if (href.startsWith("tel:")) pushEvent({ event: "click_phone", link_type: "phone" });
+      if (href.startsWith("tel:")) {
+        pushEvent({
+          event: "click_phone",
+          link_type: "phone",
+          call_source: link?.dataset.callSource || "standard",
+        });
+      }
       if (href.startsWith("mailto:")) pushEvent({ event: "click_email", link_type: "email" });
     }
 

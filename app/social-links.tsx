@@ -1,3 +1,5 @@
+import { FooterPhoneLink } from "./ads-aware-phone";
+
 const socialProfiles = [
   { name: "Facebook", initials: "f" },
   { name: "LinkedIn", initials: "in" },
@@ -8,7 +10,7 @@ export default function SocialLinks() {
     <>
     <div className="footer-contact">
       <span className="footer-social-label">Contact us</span>
-      <div><a href="tel:01827488063"><i aria-hidden="true">☎</i><span><small>Call our team</small>01827 488063</span></a><a href="mailto:admin@commercialepcdirect.co.uk"><i aria-hidden="true">@</i><span><small>Email us</small>admin@commercialepcdirect.co.uk</span></a></div>
+      <div><FooterPhoneLink /><a href="mailto:admin@commercialepcdirect.co.uk"><i aria-hidden="true">@</i><span><small>Email us</small>admin@commercialepcdirect.co.uk</span></a></div>
     </div>
     <div className="footer-social" aria-label="Social media profiles coming soon">
       <span className="footer-social-label">Follow us</span>

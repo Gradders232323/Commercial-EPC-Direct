@@ -59,7 +59,7 @@ export default function BookingForm() {
       setSent(true);
     } catch {
       trackQuoteEvent("form_error", "Instant quote and booking page");
-      setError("We couldn’t send your request just now. Please try again or call 01827 488063.");
+      setError("We couldn’t send your request just now. Please try again or call 0330 190 1259.");
     } finally {
       setSending(false);
     }

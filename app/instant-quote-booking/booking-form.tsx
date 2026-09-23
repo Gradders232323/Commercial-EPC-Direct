@@ -1,7 +1,11 @@
 "use client";
 
 import { FormEvent, useMemo, useRef, useState } from "react";
-import { WEB3FORMS_ACCESS_KEY, WEB3FORMS_ENDPOINT } from "../quote-form";
+import {
+  GRADWELL_OS_WEBHOOK,
+  WEB3FORMS_ACCESS_KEY,
+  WEB3FORMS_ENDPOINT,
+} from "../quote-form";
 import { trackQuoteEvent } from "../tracking";
 
 const serviceOptions = [
@@ -40,12 +44,41 @@ export default function BookingForm() {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
-    formData.append("access_key", WEB3FORMS_ACCESS_KEY);
-    formData.append("subject", `Instant quote request — ${selectedServices.join(", ")}`);
-    formData.append("from_name", "Commercial EPC Direct");
-    formData.append("Services", selectedServices.join(", "));
-    formData.append("Source", "Instant quote and booking page");
-    formData.append("Page URL", window.location.href);
+    const pageUrl = new URL(window.location.href);
+    const services = selectedServices.join(", ");
+    const details = String(formData.get("property_details") || "").trim();
+
+    formData.set("access_key", WEB3FORMS_ACCESS_KEY);
+    formData.set("webhook", GRADWELL_OS_WEBHOOK);
+    formData.set("subject", `Instant quote request — ${services}`);
+    formData.set("from_name", "Commercial EPC Direct");
+    formData.set("Services", services);
+    formData.set("Source", "Instant quote and booking page");
+    formData.set("Page URL", pageUrl.href);
+    formData.set("page_url", pageUrl.href);
+    formData.set("submitted_at", new Date().toISOString());
+    formData.set("service", services);
+    if (details) formData.set("message", details);
+    formData.set("property_address", [
+      String(formData.get("address_line_1") || "").trim(),
+      String(formData.get("postcode") || "").trim(),
+    ].filter(Boolean).join(", "));
+    formData.set("business_key", "commercial_epc");
+    formData.set("form_id", "commercial_epc_instant_quote");
+
+    for (const key of [
+      "utm_source",
+      "utm_medium",
+      "utm_campaign",
+      "utm_term",
+      "utm_content",
+      "gclid",
+      "gbraid",
+      "wbraid",
+    ]) {
+      const value = pageUrl.searchParams.get(key);
+      if (value) formData.set(key, value);
+    }
 
     setSending(true);
     setError("");

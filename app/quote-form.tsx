@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useRef, useState } from "react";
+import { applyPaidAttribution } from "./attribution";
 import { trackQuoteEvent } from "./tracking";
 
 type TrackingWindow = Window & {
@@ -68,10 +69,7 @@ export default function QuoteForm({
     if (formId) formData.set("form_id", formId);
     if (city) formData.set("city", city);
 
-    for (const key of ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "gbraid", "wbraid"]) {
-      const value = pageUrl.searchParams.get(key);
-      if (value) formData.set(key, value);
-    }
+    applyPaidAttribution(formData, pageUrl);
 
     setSending(true);
     setError("");

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { capturePaidAttribution } from "./attribution";
 
 type ConsentChoice = "granted" | "denied";
 type TrackingWindow = Window & {
@@ -62,6 +63,7 @@ export default function Tracking() {
 
     if (savedChoice) {
       updateConsent(savedChoice);
+      if (savedChoice === "granted") capturePaidAttribution();
       sendPageView();
       pageViewConsent.current = savedChoice;
     } else {
@@ -93,6 +95,7 @@ export default function Tracking() {
       // Apply the choice for this page even if it cannot be persisted.
     }
     updateConsent(choice);
+    if (choice === "granted") capturePaidAttribution();
     if (pageViewConsent.current !== choice) {
       sendPageView();
       pageViewConsent.current = choice;

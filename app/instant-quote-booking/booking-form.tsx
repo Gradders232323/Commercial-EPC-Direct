@@ -6,6 +6,7 @@ import {
   WEB3FORMS_ACCESS_KEY,
   WEB3FORMS_ENDPOINT,
 } from "../quote-form";
+import { applyPaidAttribution } from "../attribution";
 import { trackQuoteEvent } from "../tracking";
 
 const serviceOptions = [
@@ -66,19 +67,7 @@ export default function BookingForm() {
     formData.set("business_key", "commercial_epc");
     formData.set("form_id", "commercial_epc_instant_quote");
 
-    for (const key of [
-      "utm_source",
-      "utm_medium",
-      "utm_campaign",
-      "utm_term",
-      "utm_content",
-      "gclid",
-      "gbraid",
-      "wbraid",
-    ]) {
-      const value = pageUrl.searchParams.get(key);
-      if (value) formData.set(key, value);
-    }
+    applyPaidAttribution(formData, pageUrl);
 
     setSending(true);
     setError("");

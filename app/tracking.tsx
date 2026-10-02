@@ -50,6 +50,10 @@ export default function Tracking() {
   const pageViewConsent = useRef<ConsentChoice | null>(null);
 
   useEffect(() => {
+    // Keep the paid-click identifier available to the form flow. This is
+    // separate from Google tag consent and never sends contact data to Ads.
+    capturePaidAttribution();
+
     let storedChoice: string | null = null;
     try {
       storedChoice = window.localStorage.getItem(STORAGE_KEY);
@@ -63,7 +67,6 @@ export default function Tracking() {
 
     if (savedChoice) {
       updateConsent(savedChoice);
-      if (savedChoice === "granted") capturePaidAttribution();
       sendPageView();
       pageViewConsent.current = savedChoice;
     } else {
@@ -95,7 +98,6 @@ export default function Tracking() {
       // Apply the choice for this page even if it cannot be persisted.
     }
     updateConsent(choice);
-    if (choice === "granted") capturePaidAttribution();
     if (pageViewConsent.current !== choice) {
       sendPageView();
       pageViewConsent.current = choice;

@@ -33,7 +33,7 @@ export default function PrivacyPage() {
       <div className="eyebrow"><span></span> Your information</div>
       <h1>Privacy, explained <em>clearly.</em></h1>
       <p>This notice explains how Commercial EPC Direct collects and uses personal information when you browse our website, contact us or submit a property enquiry.</p>
-      <span className="privacy-updated">Last updated: 11 August 2026</span>
+      <span className="privacy-updated">Last updated: 2 October 2026</span>
     </header>
 
     <div className="privacy-layout">
@@ -78,6 +78,7 @@ export default function PrivacyPage() {
           <p>We may share limited personal information with organisations that help us operate the website and deliver the requested service. These may include:</p>
           <ul>
             <li><strong>Web3Forms</strong>, which securely transmits website enquiry submissions to us;</li>
+            <li><strong>Google Ads</strong>, where a Google ad click identifier is present and an enquiry is subsequently assessed as a qualified lead. We send the click identifier only for this measurement; we do not send the enquiry&apos;s name, email address, telephone number, message or property details for that purpose;</li>
             <li>website hosting, email, IT support and security providers;</li>
             <li>professional advisers, accreditation schemes, lodgement platforms or public registers where relevant to an instructed assessment; and</li>
             <li>regulators, courts, law-enforcement bodies or other parties where disclosure is required by law.</li>
@@ -95,6 +96,7 @@ export default function PrivacyPage() {
           <h2>6. Cookies and website data</h2>
           <p>We use essential storage where it is required for website security and core operation. With your permission, we may also use analytics and advertising-measurement technologies to understand how the website is used, attribute enquiries and improve our marketing.</p>
           <p>Optional analytics and advertising storage is denied by default. You can accept or reject non-essential cookies using the choice shown when you first visit. Your choice is saved on your device and communicated to our measurement tools.</p>
+          <p>If you submit an enquiry after arriving via a Google ad, the page address may contain a Google click identifier. We retain that identifier with the enquiry so that, if the enquiry is later assessed as qualified, we can measure the advertising outcome. This does not use the enquiry&apos;s contact details and does not create an advertising audience or personalise ads.</p>
         </section>
 
         <section id="rights">

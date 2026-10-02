@@ -1,5 +1,3 @@
-type ConsentChoice = "granted" | "denied";
-
 type PaidAttribution = {
   capturedAt: string;
   landingPage: string;
@@ -14,7 +12,6 @@ type PaidAttribution = {
   wbraid: string;
 };
 
-const CONSENT_STORAGE_KEY = "commercial_epc_consent_v1";
 const ATTRIBUTION_STORAGE_KEY = "commercial_epc_paid_attribution_v1";
 const PARAMETER_NAMES = [
   "utm_source",
@@ -26,15 +23,6 @@ const PARAMETER_NAMES = [
   "gbraid",
   "wbraid",
 ] as const;
-
-function readConsent(): ConsentChoice | null {
-  try {
-    const choice = window.localStorage.getItem(CONSENT_STORAGE_KEY);
-    return choice === "granted" || choice === "denied" ? choice : null;
-  } catch {
-    return null;
-  }
-}
 
 function isGooglePaidTraffic(attribution: Pick<PaidAttribution, "utm_source" | "utm_medium" | "gclid" | "gbraid" | "wbraid">) {
   if (attribution.gclid || attribution.gbraid || attribution.wbraid) return true;
@@ -98,11 +86,12 @@ function readSavedAttribution(): PaidAttribution | null {
 }
 
 /**
- * Captures a paid Google landing visit for this browser session. It only
- * persists after the visitor has opted in to advertising measurement.
+ * Captures a paid Google landing visit for the current browser session.
+ * This record contains campaign and click identifiers only; contact details
+ * are never added to the attribution record or passed to Google Ads.
  */
 export function capturePaidAttribution() {
-  if (typeof window === "undefined" || readConsent() !== "granted") return;
+  if (typeof window === "undefined") return;
 
   const incoming = attributionFromUrl(new URL(window.location.href));
   if (!isGooglePaidTraffic(incoming) || readSavedAttribution()) return;
@@ -118,17 +107,15 @@ export function capturePaidAttribution() {
 }
 
 /**
- * Adds the current paid-click data and the original paid landing details to
- * a Web3Forms submission. The Gradwell OS uses these fields for the offline
- * Google Ads conversion upload when a lead is later marked quotable.
+ * Adds paid-click data and the original paid landing details to an enquiry.
+ * The OS uses the captured Google click ID only when a lead is later marked
+ * quotable. It does not send enquiry contact details to Google Ads.
  */
 export function applyPaidAttribution(formData: FormData, pageUrl: URL) {
   const current = attributionFromUrl(pageUrl);
-  const consent = readConsent();
+  capturePaidAttribution();
 
-  if (consent === "granted") capturePaidAttribution();
-
-  const saved = consent === "granted" ? readSavedAttribution() : null;
+  const saved = readSavedAttribution();
   const attribution = saved ?? (isGooglePaidTraffic(current) ? current : null);
   if (!attribution) return;
 
@@ -145,8 +132,4 @@ export function applyPaidAttribution(formData: FormData, pageUrl: URL) {
     if (value) formData.set(`first_touch_${name}`, value);
   }
 
-  if (consent) {
-    formData.set("ad_user_data", consent);
-    formData.set("ad_personalization", consent);
-  }
 }

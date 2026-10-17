@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "./domestic-epc.css";
 @import "./instant-quote-booking/booking-funnel.css";
+@import "./pricing/pricing.css";
 
 :root { --ink:#12251f; --green:#173f33; --deep:#0d2d25; --mint:#e4f2ec; --lime:#dfff4f; --cream:#f5f3eb; --line:#d7ddd8; --white:#fff; }
 * { box-sizing:border-box; }

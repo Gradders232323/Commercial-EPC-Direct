@@ -27,7 +27,7 @@
 .ced-epc-help .button,.ced-epc-callout .button { flex-shrink:0; }
 .site-nav .nav-links>a.ced-domestic-nav { color:var(--green); font-weight:750; white-space:nowrap; }
 .ced-epc-page :is(a,summary):focus-visible { outline:3px solid #97b420; outline-offset:5px; }
-@media(min-width:901px) and (max-width:1190px) { .site-nav .nav-structured { gap:16px; } .site-nav .brand { font-size:16px; } .site-nav .instant-quote-button { font-size:12px; gap:10px; } }
+@media(min-width:901px) and (max-width:1350px) { .site-nav .nav-structured { gap:16px; } .site-nav .brand { font-size:16px; } .site-nav .instant-quote-button { font-size:13px; gap:10px; } }
 @media(max-width:1100px) { .site-nav .nav-structured { display:none; } .site-nav .mobile-nav { display:block; } }
 @media(max-width:800px) { .ced-epc-intro { grid-template-columns:1fr; } .ced-epc-expectations { padding:22px; } .ced-epc-help,.ced-epc-callout { align-items:flex-start; flex-direction:column; gap:22px; } .ced-epc-quote-heading { display:block; } .ced-epc-quote-heading>p { margin-top:12px; } }
 @media(max-width:480px) { .ced-epc-intro { padding-top:24px; } .ced-epc-back { margin-bottom:24px; } .ced-epc-quote { padding-top:28px; } .ced-epc-help .button,.ced-epc-callout .button { width:100%; font-size:14px; gap:16px; } }

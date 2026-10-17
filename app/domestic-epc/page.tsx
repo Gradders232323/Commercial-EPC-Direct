@@ -15,7 +15,7 @@ export default function DomesticEpcPage() {
       <SiteNav />
       <section className="ced-epc-intro" aria-labelledby="domestic-epc-title">
         <div>
-          <a className="ced-epc-back" href="/services">Services <span aria-hidden="true">/</span> Domestic EPC</a>
+          <a className="ced-epc-back" href="/instant-quote-booking#booking-form"><span aria-hidden="true">←</span> Change service</a>
           <span className="kicker">Domestic EPC instant quote</span>
           <h1 id="domestic-epc-title">Your home EPC.<br /><em>A clear price, upfront.</em></h1>
           <p>Start with the address, choose the property type and bedrooms, then review your quote. For existing homes, flats and residential rental properties.</p>

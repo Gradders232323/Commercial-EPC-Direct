@@ -2,11 +2,10 @@ import type { Metadata } from "next";
 import SiteNav from "../site-nav";
 import SocialLinks from "../social-links";
 import BookingForm from "./booking-form";
-import DomesticEpcCallout from "../domestic-epc-callout";
 
 export const metadata: Metadata = {
   title: "Instant Quote & Booking | Commercial EPC Direct",
-  description: "Request a tailored commercial property assessment quote and share your preferred timescale with Commercial EPC Direct.",
+  description: "Choose Domestic EPC for an instant home quotation, or request a tailored commercial property assessment quote with Commercial EPC Direct.",
   alternates: { canonical: "/instant-quote-booking" },
 };
 
@@ -20,12 +19,11 @@ export default function InstantQuoteBookingPage() {
   return (
     <main className="booking-page">
       <SiteNav quoteHref="#booking-form" />
-      <DomesticEpcCallout />
       <section className="booking-hero">
         <div className="booking-intro">
           <span className="kicker">Instant quote &amp; booking request</span>
           <h1>Tell us what the property <em>needs.</em></h1>
-          <p>Select your services, share the essentials and tell us your preferred timescale. We’ll review the brief and confirm the right scope, price and next available appointment.</p>
+          <p>Choose Domestic EPC to get an instant price for your home. For commercial properties, select the services you need and we’ll confirm the scope, price and availability.</p>
           <div className="booking-assurances">
             {assurances.map(([number, title, copy]) => <article key={number}><span>{number}</span><div><strong>{title}</strong><p>{copy}</p></div></article>)}
           </div>

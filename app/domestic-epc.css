@@ -32,3 +32,10 @@
 @media(max-width:800px) { .ced-epc-intro { grid-template-columns:1fr; } .ced-epc-expectations { padding:22px; } .ced-epc-help,.ced-epc-callout { align-items:flex-start; flex-direction:column; gap:22px; } .ced-epc-quote-heading { display:block; } .ced-epc-quote-heading>p { margin-top:12px; } }
 @media(max-width:480px) { .ced-epc-intro { padding-top:24px; } .ced-epc-back { margin-bottom:24px; } .ced-epc-quote { padding-top:28px; } .ced-epc-help .button,.ced-epc-callout .button { width:100%; font-size:14px; gap:16px; } }
 @media(prefers-reduced-motion:reduce) { .ced-epc-page { scroll-behavior:auto; } }
+.booking-service-guidance { margin:-6px 0 20px; color:#52675d; font-size:13px; line-height:1.55; }
+.booking-service-grid .booking-service-link { border:1px solid #cbd4cf; background:white; color:var(--ink); min-height:89px; padding:14px; display:grid; grid-template-columns:37px 1fr 22px; gap:11px; align-items:center; text-align:left; border-radius:4px; text-decoration:none; }
+.booking-service-grid .booking-service-link:hover { border-color:#7e9288; background:#f5faf7; }
+.booking-service-grid .booking-service-link:focus-visible,.booking-service-grid button:focus-visible { outline:3px solid #527966; outline-offset:3px; }
+.booking-service-grid .booking-service-link span { display:flex; flex-direction:column; gap:5px; }
+.booking-service-grid .booking-service-link strong { font-size:12px; }
+.booking-service-grid .booking-service-link small { font-size:9px; line-height:1.35; color:#52675d; }

@@ -105,8 +105,12 @@ export default function BookingForm() {
       <input type="checkbox" name="botcheck" className="form-botcheck" tabIndex={-1} autoComplete="off" aria-hidden="true" />
 
       <fieldset className="booking-step">
-        <legend><span>01</span><strong>Choose one or more services</strong></legend>
+        <legend><span>01</span><strong>Choose your service</strong></legend>
+        <p className="booking-service-guidance">Domestic EPC starts a step-by-step instant quote. You can combine the commercial services below in one enquiry.</p>
         <div className="booking-service-grid">
+          <a className="booking-service-link" href="/domestic-epc#domestic-epc-quote">
+            <i aria-hidden="true">HOME</i><span><strong>Domestic EPC</strong><small>Homes and flats · start your instant quote</small></span><b aria-hidden="true">→</b>
+          </a>
           {serviceOptions.map(([service, detail, code]) => {
             const selected = selectedServices.includes(service);
             return (

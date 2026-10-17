@@ -22,6 +22,7 @@ const corePages = [
   ["Home", "/"],
   ["Instant Quote & Booking", "/instant-quote-booking"],
   ["Domestic EPC Instant Quote", "/domestic-epc"],
+  ["Pricing", "/pricing"],
   ["Services", "/services"],
   ["Guides", "/guides"],
   ["Locations", "/locations"],

@@ -39,3 +39,4 @@
 .booking-service-grid .booking-service-link span { display:flex; flex-direction:column; gap:5px; }
 .booking-service-grid .booking-service-link strong { font-size:12px; }
 .booking-service-grid .booking-service-link small { font-size:9px; line-height:1.35; color:#52675d; }
+.booking-service-grid .booking-service-link i { font-family:inherit; font-size:9px; line-height:1; }

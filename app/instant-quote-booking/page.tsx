@@ -23,7 +23,7 @@ export default function InstantQuoteBookingPage() {
       </section>
       <section className="booking-next">
         <span className="kicker">What happens next</span>
-        <div>{[["01","One property, one request","Your chosen services and property details stay together."],["02","Clear pricing","Eligible Domestic EPCs have an instant price. Other services and bundles receive a tailored quotation."],["03","A date that works for you","Suggest a date now or arrange it later. Appointments are confirmed separately, and no online payment is taken."]].map(([number,title,copy])=><article key={number}><span>{number}</span><h2>{title}</h2><p>{copy}</p></article>)}</div>
+        <div>{[["01","One property, one request","Your chosen services and property details stay together."],["02","Clear pricing","Eligible Domestic EPCs have an instant price. Other services and bundles receive a tailored quotation."],["03","A date that works for you","Choose an inspection date and morning or afternoon. Our team confirms availability, and no online payment is taken."]].map(([number,title,copy])=><article key={number}><span>{number}</span><h2>{title}</h2><p>{copy}</p></article>)}</div>
       </section>
       <footer><a className="brand brand-footer" href="/"><span className="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Commercial EPC <b>Direct</b></span></a><p>Commercial property assessments, made simple.</p><div className="footer-links"><a href="/services">Services</a><a href="/guides">Guides</a><a href="/about">About</a><a href="/locations">Locations</a><a href="/privacy">Privacy</a></div><SocialLinks /><small>© {new Date().getFullYear()} Commercial EPC Direct. All rights reserved.</small></footer>
     </main>

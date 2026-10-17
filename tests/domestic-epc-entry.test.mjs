@@ -54,7 +54,7 @@ test("domestic route is discoverable while commercial links remain available", a
   const nav = await readFile(new URL("../app/site-nav.tsx", import.meta.url), "utf8");
   assert.equal((nav.match(/href="\/domestic-epc"/g) || []).length, 2);
   assert.match(nav, /"\/instant-quote-booking"/);
-  for (const path of ["app/page.tsx", "app/services/page.tsx", "app/instant-quote-booking/page.tsx"]) {
+  for (const path of ["app/page.tsx", "app/services/page.tsx"]) {
     const content = await readFile(new URL(`../${path}`, import.meta.url), "utf8");
     assert.match(content, /<DomesticEpcCallout \/>/);
   }
@@ -62,4 +62,26 @@ test("domestic route is discoverable while commercial links remain available", a
     const content = await readFile(new URL(`../${path}`, import.meta.url), "utf8");
     assert.match(content, /"\/domestic-epc"/);
   }
+});
+
+test("quote page uses the service selector instead of a separate Domestic EPC banner", async () => {
+  const page = await readFile(new URL("../app/instant-quote-booking/page.tsx", import.meta.url), "utf8");
+  const form = await readFile(new URL("../app/instant-quote-booking/booking-form.tsx", import.meta.url), "utf8");
+  assert.doesNotMatch(page, /DomesticEpcCallout|Get a Domestic EPC quote/);
+  assert.match(form, /Choose your service/);
+  assert.match(form, /<a className="booking-service-link" href="\/domestic-epc#domestic-epc-quote">/);
+  assert.match(form, /<strong>Domestic EPC<\/strong>/);
+  // Domestic EPC must use its OS-backed acceptance flow, not the commercial enquiry POST.
+  const commercialOptions = form.slice(form.indexOf("const serviceOptions ="), form.indexOf("export default"));
+  assert.doesNotMatch(commercialOptions, /Domestic EPC/);
+  assert.match(form, /selectedServices\.join/);
+  assert.match(form, /aria-pressed=\{selected\}/);
+});
+
+test("Domestic EPC funnel lets customers return to the service selector", async () => {
+  const page = await readFile(new URL("../app/domestic-epc/page.tsx", import.meta.url), "utf8");
+  const css = await readFile(new URL("../app/domestic-epc.css", import.meta.url), "utf8");
+  assert.match(page, /href="\/instant-quote-booking#booking-form"/);
+  assert.match(page, /id="domestic-epc-quote"/);
+  assert.match(css, /\.booking-service-link:focus-visible/);
 });

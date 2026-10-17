@@ -24,7 +24,7 @@ export default function DomesticEpcPage() {
           <strong>Simple from the first step.</strong>
           <ul>
             <li><span aria-hidden="true">✓</span> Total price including VAT shown before you accept</li>
-            <li><span aria-hidden="true">✓</span> Suggest a visit date, or arrange one later</li>
+            <li><span aria-hidden="true">✓</span> Choose an inspection date and morning or afternoon</li>
             <li><span aria-hidden="true">✓</span> Manual quote if your property is not priced yet</li>
           </ul>
           <p>Online payment is not available yet. Our team will arrange full payment before the inspection. Your appointment is confirmed separately.</p>

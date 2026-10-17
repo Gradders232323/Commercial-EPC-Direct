@@ -18,7 +18,7 @@ export default function DomesticEpcPage() {
           <a className="ced-epc-back" href="/instant-quote-booking#booking-form"><span aria-hidden="true">←</span> Change service</a>
           <span className="kicker">Domestic EPC instant quote</span>
           <h1 id="domestic-epc-title">Your home EPC.<br /><em>A clear price, upfront.</em></h1>
-          <p>Start with the address, choose the property type and bedrooms, then review your quote. For existing homes, flats and residential rental properties.</p>
+          <p>Domestic EPC is preselected below. Add any other services you need, enter the address and property details, then review your quote. For existing homes, flats and residential rental properties.</p>
         </div>
         <aside className="ced-epc-expectations" aria-label="Before you start">
           <strong>Simple from the first step.</strong>

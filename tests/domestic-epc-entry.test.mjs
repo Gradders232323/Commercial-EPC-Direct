@@ -31,18 +31,15 @@ test("frame resize only accepts finite bounded numbers", () => {
   assert.equal(getDomesticEpcEmbedHeight({ ...valid, height: 6000 }, DOMESTIC_EPC_BOOKING_ORIGIN, true), 6000);
 });
 
-test("embed checks the exact window and offers a safe standalone fallback", async () => {
+test("Domestic EPC preselects the same multi-service funnel", async () => {
   const embed = await readFile(new URL("../app/domestic-epc/booking-embed.tsx", import.meta.url), "utf8");
-  assert.match(embed, /event\.source === frame\.current\.contentWindow/);
-  assert.match(embed, /removeEventListener\("message", onMessage\)/);
-  assert.match(embed, /\?embed=1/);
-  assert.match(embed, /title="Domestic EPC instant quotation and booking request"/);
-  assert.match(embed, /target="_blank" rel="noopener noreferrer"/);
+  assert.match(embed, /import BookingForm from "\.\.\/instant-quote-booking\/booking-form"/);
+  assert.match(embed, /initialService="domestic-epc"/);
 });
 
 test("entry copy preserves payment and appointment boundaries without hard-coded prices", async () => {
   const page = await readFile(new URL("../app/domestic-epc/page.tsx", import.meta.url), "utf8");
-  assert.match(page, /Start with the address/);
+  assert.match(page, /Domestic EPC is preselected below/);
   assert.match(page, /Online payment is not available yet/);
   assert.match(page, /full payment before the inspection/);
   assert.match(page, /appointment is confirmed separately/);
@@ -68,14 +65,10 @@ test("quote page uses the service selector instead of a separate Domestic EPC ba
   const page = await readFile(new URL("../app/instant-quote-booking/page.tsx", import.meta.url), "utf8");
   const form = await readFile(new URL("../app/instant-quote-booking/booking-form.tsx", import.meta.url), "utf8");
   assert.doesNotMatch(page, /DomesticEpcCallout|Get a Domestic EPC quote/);
-  assert.match(form, /Choose your service/);
-  assert.match(form, /<a className="booking-service-link" href="\/domestic-epc#domestic-epc-quote">/);
-  assert.match(form, /<strong>Domestic EPC<\/strong>/);
-  // Domestic EPC must use its OS-backed acceptance flow, not the commercial enquiry POST.
-  const commercialOptions = form.slice(form.indexOf("const serviceOptions ="), form.indexOf("export default"));
-  assert.doesNotMatch(commercialOptions, /Domestic EPC/);
-  assert.match(form, /selectedServices\.join/);
-  assert.match(form, /aria-pressed=\{selected\}/);
+  assert.match(form, /SERVICE_QUOTE_URL/);
+  assert.match(form, /Choose services and build your property quotation/);
+  assert.doesNotMatch(form, /booking-service-link|href="\/domestic-epc/);
+  assert.match(page, /Select one service or several/);
 });
 
 test("Domestic EPC funnel lets customers return to the service selector", async () => {

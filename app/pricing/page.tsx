@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import SiteNav from "../site-nav";
 import SocialLinks from "../social-links";
 import { services } from "../service-data";
@@ -63,7 +64,7 @@ export default function PricingPage() {
         <div><p>Enter the address, add your property details and choose a preferred inspection date and morning or afternoon. We’ll confirm availability before the appointment is booked.</p><p className="pricing-small">Online payment is not available yet. For Domestic EPC, our team will arrange full payment before the inspection. Existing accepted quotations are unchanged by this published guide.</p><a className="button" href="/instant-quote-booking#booking-form">Start your quotation <span aria-hidden="true">→</span></a></div>
       </aside>
       <footer>
-        <a className="brand brand-footer" href="/"><span className="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Commercial EPC <b>Direct</b></span></a>
+        <Link className="brand brand-footer" href="/"><span className="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Commercial EPC <b>Direct</b></span></Link>
         <p>Commercial property assessments, made simple.</p>
         <div className="footer-links"><a href="/services">Services</a><a href="/pricing">Pricing</a><a href="/domestic-epc">Domestic EPC</a><a href="/about">About</a><a href="/privacy">Privacy</a><a href="/sitemap">Sitemap</a></div>
         <SocialLinks />

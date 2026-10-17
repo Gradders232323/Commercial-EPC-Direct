@@ -4,6 +4,7 @@ import SiteNav from "../site-nav";
 import SocialLinks from "../social-links";
 import IndustryLogos from "../industry-logos";
 import { services } from "../service-data";
+import DomesticEpcCallout from "../domestic-epc-callout";
 
 export const metadata: Metadata = {
   title: "Commercial Property Services | Commercial EPC Direct",
@@ -21,6 +22,7 @@ export default function ServicesPage() {
         <p>Clear quotes, accredited professionals and one helpful team across a focused range of commercial property assessments.</p>
       </section>
       <IndustryLogos />
+      <DomesticEpcCallout />
       <section className="section services-hub">
         <div className="section-heading"><div><span className="kicker">Our services</span><h2>What does your property need?</h2></div><p>Choose a service to see what it covers, who it is for and how our in-house team completes the assessment.</p></div>
         <div>{services.map((service, index) => <a key={service.slug} href={`/services/${service.slug}`}><span>0{index + 1}</span><h3>{service.title}</h3><p>{service.menuCopy}</p><i>→</i></a>)}</div>

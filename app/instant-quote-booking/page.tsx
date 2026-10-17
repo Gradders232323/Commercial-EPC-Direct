@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import SiteNav from "../site-nav";
 import SocialLinks from "../social-links";
 import BookingForm from "./booking-form";
+import DomesticEpcCallout from "../domestic-epc-callout";
 
 export const metadata: Metadata = {
   title: "Instant Quote & Booking | Commercial EPC Direct",
@@ -19,6 +20,7 @@ export default function InstantQuoteBookingPage() {
   return (
     <main className="booking-page">
       <SiteNav quoteHref="#booking-form" />
+      <DomesticEpcCallout />
       <section className="booking-hero">
         <div className="booking-intro">
           <span className="kicker">Instant quote &amp; booking request</span>

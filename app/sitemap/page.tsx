@@ -21,6 +21,7 @@ const locations = [
 const corePages = [
   ["Home", "/"],
   ["Instant Quote & Booking", "/instant-quote-booking"],
+  ["Domestic EPC Instant Quote", "/domestic-epc"],
   ["Services", "/services"],
   ["Guides", "/guides"],
   ["Locations", "/locations"],

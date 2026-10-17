@@ -3,6 +3,7 @@ import QuoteForm from "./quote-form";
 import SiteNav from "./site-nav";
 import SocialLinks from "./social-links";
 import IndustryLogos from "./industry-logos";
+import DomesticEpcCallout from "./domestic-epc-callout";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
 
@@ -71,6 +72,7 @@ export default function Home() {
       </section>
 
       <IndustryLogos />
+      <DomesticEpcCallout />
 
       <section className="section services" id="services">
         <div className="section-heading">

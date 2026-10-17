@@ -1,0 +1,16 @@
+.ced-funnel-intro { padding: 50px max(24px,calc((100vw - 1200px)/2)) 46px; background: #173f33; color: white; }
+.ced-funnel-intro .kicker { color: #c4d9cf; margin-bottom: 20px; }
+.ced-funnel-intro h1 { font-size: clamp(34px,4.3vw,58px); line-height: 1.07; letter-spacing: -.045em; max-width: 900px; margin-bottom: 20px; }
+.ced-funnel-intro p { font-size: 17px; color: #d9e7df; line-height: 1.65; max-width: 750px; margin-bottom: 0; }
+.ced-funnel-section { padding: 32px 24px 50px; background: #f5f3eb; }
+.ced-shared-funnel { max-width: 1200px; margin: auto; scroll-margin-top: 24px; }
+.ced-shared-funnel iframe { width: 100%; display: block; border: 0; background: #f5f3eb; scroll-margin-top: 24px; }
+.ced-funnel-loading { padding: 15px 20px; color: #173f33; border: 1px solid #bdccc4; border-radius: 8px; background: white; }
+.ced-funnel-fallback { margin: 20px 0 0; font-size: 14px; line-height: 1.6; text-align: center; color: #50655b; }
+.ced-funnel-fallback a { color: #173f33; text-decoration: underline; text-underline-offset: 3px; font-weight: 650; }
+.ced-funnel-fallback a:focus-visible { outline: 3px solid #173f33; outline-offset: 4px; }
+@media (max-width: 600px) {
+  .ced-funnel-intro { padding: 30px 20px; }
+  .ced-funnel-intro p { font-size: 16px; }
+  .ced-funnel-section { padding: 20px 8px 32px; }
+}
